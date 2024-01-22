@@ -1,0 +1,513 @@
+#,Team,Name,Goals,Big chances missed,Successful dribbles %,Total shots,Headed goals,Set piece conversion %
+1,,Antony,0.5,0,66.67,4.5,0,0
+2,,Cody Gakpo,0.64,0.36,50,3.64,0,0
+3,,Dušan Tadić,0.32,0.15,51.11,1.35,0,0
+4,,Joey Veerman,0.12,0.09,73.81,1.76,0,0
+5,,Fredrik Aursnes,0,0,100,1,0,0
+6,,Steven Berghuis,0.31,0.07,45.95,2.59,0.07,0
+7,,Václav Černý,0.41,0.16,57.14,3.03,0.03,0
+8,,Fabian De Keijzer,0,0,0,0,0,0
+9,,Xavi Simons,0.56,0.26,57.36,2.74,0.06,0
+10,,Orkun Kökçü,0.25,0,57.69,2.63,0,0.3
+11,,Philippe Rommens,0.11,0.07,55.56,1.5,0,0.51
+12,,Oussama Tannane,0.24,0.08,56.16,3.08,0,0.4
+13,,Ki-Jana Hoever,0,0.2,58.33,0.8,0,0
+14,,Gijs Smal,0.06,0,51.43,1.26,0,0
+15,,Dávid Hancko,0.06,0.13,72.22,1.35,0.03,0
+16,,Kik Pierie,0.14,0.29,100,0.71,0.14,0
+17,,Vito van Crooij,0.35,0.18,37.21,1.97,0.03,0
+18,,Ramiz Zerrouki,0.03,0.06,60,0.97,0,0
+19,,Tijjani Reijnders,0.09,0.15,62.96,2.06,0,0
+20,,Aslak Fonn Witry,0,0,0,0,0,0
+21,,Barry Lauwers,0,0,0,0,0,0
+22,,Edson Álvarez,0.1,0.1,50,2.03,0.06,0
+23,,Tobias Lauritsen,0.35,0.32,45.45,2.65,0.15,0
+24,,Nick Olij,0,0,0,0,0,0
+25,,Thom Haye,0.06,0,34.69,1.26,0,0.4
+26,,Daley Blind,0,0,66.67,0.69,0,0
+27,,Ibrahim Sangaré,0.17,0,77.27,1.31,0.1,0
+28,,Steven Bergwijn,0.38,0.34,53.42,2.69,0.03,0
+29,,Jesper Karlsson,0.39,0.09,45.16,2.13,0,0
+30,,Maximilian Wittek,0.1,0,53.49,2.42,0,0.46
+31,,Noni Madueke,0.2,0.6,50,3.4,0,0
+32,,Michal Sadílek,0.14,0.14,33.33,1.14,0,0
+33,,Sven Mijnans,0.21,0.06,64.29,1.79,0.06,0
+34,,Carel Eiting,0.09,0.03,46.67,0.79,0,0
+35,,Jørgen Strand Larsen,0.25,0.25,62.5,2.5,0,0
+36,,Sebastian Szymański,0.31,0.24,31.11,2.03,0.03,0
+37,,Lars Unnerstall,0,0,100,0,0,0
+38,,Etienne Vaessen,0,0,100,0,0,0
+39,,Jordy Clasie,0.09,0.03,70,0.67,0,0
+40,,Sam Beukema,0.08,0.04,80,0.42,0.08,0
+41,,João Virgínia,0,0,50,0,0,0
+42,,Luuk de Jong,0.58,0.54,38.46,2.63,0.21,0
+43,,Lasse Schøne,0.03,0,58.82,0.63,0,0
+44,,Cyril Ngonge,0.25,0.17,65.52,2.5,0,0
+45,,Mark Diemers,0.06,0.03,52.31,2.06,0.03,0
+46,,Andries Noppert,0,0,0,0,0,0
+47,,Lutsharel Geertruida,0.1,0.03,62.96,0.87,0.03,0
+48,,Kristijan Bistrović,0.08,0.08,57.69,1.54,0,0
+49,,Vangelis Pavlidis,0.48,0.52,38.71,2.56,0,0
+50,,Jasper Cillessen,0,0,0,0,0,0
+51,,Stijn van Gassel,0,0,100,0,0,0
+52,,Mika Godts,0,0,0,0.33,0,0
+53,,Przemysław Tytoń,0,0,0,0,0,0
+54,,Paweł Bochniewicz,0.06,0,42.86,0.64,0.06,0
+55,,Bas Dost,0.41,0.27,100,1.64,0.14,0
+56,,Gernot Trauner,0,0.05,100,0.58,0,0
+57,,Sven van Beek,0,0,42.86,0.6,0,0
+58,,Mats Wieffer,0.04,0,65,0.92,0,0
+59,,Mohammed Kudus,0.37,0.43,67.91,2.3,0,3.33
+60,,Calvin Bassey,0.04,0.08,81.82,0.28,0.04,0
+61,,Yukinari Sugawara,0.1,0.19,50,0.87,0,0
+62,,Alireza Jahanbakhsh,0.18,0.07,56,1.89,0.07,0
+63,,Johan Hove,0.11,0.11,94.12,1.28,0,0
+64,,Davy Pröpper,0,0,0,0,0,0
+65,,Johan Bakayoko,0.22,0.17,63.38,1.96,0,0
+66,,Mats Seuntjens,0.13,0.13,50.79,1.71,0,0
+67,,Robin Pröpper,0.03,0.1,46.67,1.07,0.03,0
+68,,Justin Bijlow,0,0,0,0,0,0
+69,,Rodrigo Guth,0.03,0.03,100,0.38,0.03,0
+70,,Marouan Azarkan,0.11,0.15,44.83,1.04,0,0
+71,,Javairô Dilrosun,0.16,0.13,57.83,1.71,0,0
+72,,Jurriën Timber,0.06,0.12,55.88,0.85,0.03,0
+73,,Mike Eerdhuijzen,0,0,80,0.24,0,0
+74,,Oussama Idrissi,0.15,0.15,54.17,1.44,0,0
+75,,Mica Pinto,0.09,0,62.16,0.39,0,0
+76,,Quilindschy Hartman,0.09,0,26.32,0.48,0,0
+77,,Bart Vriends,0.07,0.03,66.67,0.27,0.07,0
+78,,Jens Toornstra,0.03,0.03,50,0.68,0,0
+79,,Milan van Ewijk,0.18,0.12,43.55,1.09,0,0
+80,,Arno Verschueren,0.29,0.19,37.5,1.68,0.16,0
+81,,Can Bozdoğan,0.04,0.13,56.6,1.42,0,0
+82,,Anas Tahiri,0.03,0,60,0.41,0,0
+83,,Anastasios Douvikas,0.59,0.41,42.19,2.5,0.09,0
+84,,Kenneth Taylor,0.25,0.09,55.1,1.5,0.03,0
+85,,Pantelis Hatzidiakos,0,0.06,55.56,0.58,0,0
+86,,Bas Kuipers,0.13,0.13,34.62,1.09,0,0
+87,,Joshua Brenet,0.22,0.19,53.95,1.06,0.06,0
+88,,Ivor Pandur,0,0,0,0,0,0
+89,,Sydney van Hooijdonk,0.48,0.3,41.67,2.76,0.09,0
+90,,Xavier Mbuyamba,0.18,0.14,64.29,0.71,0.18,0
+91,,Iván Márquez,0.1,0.13,100,0.97,0.03,0
+92,,Jacob Rasmussen,0.1,0,100,0.2,0,0
+93,,Miloš Kerkez,0.09,0.03,70.45,0.76,0,0
+94,,Sander van de Streek,0.32,0.21,42.86,1.89,0.11,0
+95,,Igor Paixão,0.25,0.07,40.82,1.18,0.04,0
+96,,Jetro Willems,0,0,65,0.71,0,0
+97,,Melle Meulensteen,0.03,0.09,65.63,1,0,0
+98,,Philippe Sandler,0.05,0,60,0.43,0.05,0
+99,,Ricardo Pepi,0.41,0.21,51.02,2,0.07,0
+100,,Marcos López,0,0,42.86,0.42,0,0
+101,,Bruno Martins Indi,0,0,0,0.5,0,0
+102,,Michiel Kramer,0.44,0.3,50,1.59,0.15,0
+103,,Gerónimo Rulli,0,0,100,0,0,0
+104,,Patrik Wålemark,0.13,0.07,39.13,1.67,0,0
+105,,Anwar El Ghazi,0.35,0.13,44,1.7,0.04,0
+106,,Jarrad Branthwaite,0.07,0.04,25,0.67,0.04,0
+107,,Manfred Ugalde,0.33,0.13,44.44,1.79,0.13,0
+108,,Jordan Teze,0,0.04,62.5,0.56,0,0
+109,,Myron Van Brederode,0.16,0,59.7,0.56,0,0
+110,,Ricky van Wolfswinkel,0.29,0.44,53.57,2.21,0,0
+111,,Sean Klaiber,0.04,0,52.38,0.79,0,0
+112,,Wouter Goes,0.13,0,100,0.25,0,0
+113,,Calvin Verdonk,0,0.06,85.71,0.24,0,0
+114,,Dirk Abels,0.04,0,50,0.38,0,0
+115,,Robin Maulun,0,0,75,1.14,0,0
+116,,Redouan El Yaakoubi,0.09,0.06,85.71,0.85,0.09,0
+117,,Amin Sarr,0.26,0.32,45.76,2.84,0.05,0
+118,,Armando Obispo,0.09,0,60,0.82,0.09,0
+119,,Jeroen Veldmate,0.12,0,100,0.48,0.04,0.8
+120,,Mike van der Hoorn,0.04,0.08,83.33,0.92,0.04,0
+121,,Quinten Timber,0.08,0.13,62.9,1,0,0
+122,,Nicolas Isimat-Mirin,0,0.06,100,0.56,0,0
+123,,Navarone Foor,0.13,0.07,50,1.8,0,0
+124,,Dirk Proper,0.03,0.09,71.05,0.59,0,0
+125,,Julian Baas,0.09,0.03,64.29,0.7,0,0
+126,,Landry Dimata,0.33,0.2,41.18,1.93,0.03,0
+127,,Iliass Bel Hassani,0.24,0.1,63.04,1.9,0,1.19
+128,,Joshua Kitolano,0.12,0.06,57.14,1.09,0.09,0
+129,,Virgil Misidjan,0.23,0.19,44.09,2.29,0,0
+130,,Iñigo Cordoba,0.16,0.13,50.65,1.65,0,0
+131,,Modibo Sagnan,0.04,0,60,0.3,0,0
+132,,Jeff Hardeveld,0,0,50,0.5,0,0
+133,,Dario Van Den Buijs,0.12,0,100,0.69,0,0
+134,,Isac Lidberg,0.21,0.3,45.83,2.36,0.09,0
+135,,Shawn Adewoye,0.03,0.06,71.43,0.33,0.03,0
+136,,Julio Pleguezuelo,0.09,0,77.78,0.48,0.04,0
+137,,Adil Auassar,0,0.03,50,0.14,0,0
+138,,Mats Köhlert,0.03,0,51.52,0.48,0,0
+139,,Miguel Araujo,0.03,0.06,71.43,0.42,0,0
+140,,Danilo,0.29,0.21,46.15,1.88,0.09,0
+141,,Sondre Tronstad,0.07,0,53.33,0.68,0,0
+142,,Carlens Arcus,0.03,0,39.47,0.7,0,0
+143,,Santiago Giménez,0.47,0.47,26.42,2.69,0.13,0
+144,,Jorge Sánchez,0.12,0.06,37.93,0.88,0,0
+145,,Jens Odgaard,0.31,0.45,39.74,3.17,0.03,0
+146,,Siebe Horemans,0.09,0.03,71.11,0.74,0.06,0
+147,,Dario Serra,0.25,0,100,0.5,0,0
+148,,Romano Postema,0,0,0,0.5,0,0
+149,,Ramon Hendriks,0,0,100,0.25,0,0
+150,,Filip Stanković,0,0,0,0,0,0
+151,,Vasilis Barkas,0,0,0,0,0,0
+152,,Jay Idzes,0.03,0.06,71.43,0.69,0,0
+153,,Osame Sahraoui,0.07,0.07,57.89,1.27,0,0
+154,,Ryan Flamingo,0.09,0,43.48,0.97,0.03,0
+155,,Marco Tol,0.04,0,50,0.25,0.04,0
+156,,Burak Yılmaz,0.35,0.38,32.5,2.88,0,0.38
+157,,Dimitrios Siovas,0.04,0.08,28.57,0.54,0.04,0
+158,,Håkon Evjen,0,0.25,45.45,1.75,0,0
+159,,Paul Gladon,0.26,0.11,15.38,1.7,0.11,0
+160,,Devyne Rensch,0.12,0.04,47.62,0.5,0,0
+161,,Daryl van Mieghem,0.27,0.13,53.57,1.4,0,0
+162,,Patrick van Aanholt,0.07,0,44.44,0.73,0,0
+163,,Bart van Rooij,0,0.03,46.15,0.48,0,0
+164,,Davy Klaassen,0.24,0.21,50,1.15,0.06,0
+165,,Érick Gutiérrez,0.07,0.03,66.67,0.6,0,0
+166,,Sávio,0,0,58.33,0.17,0,0
+167,,Luuk Brouwers,0,0.04,37.5,0.38,0,0
+168,,Michel Vlap,0.09,0.28,62.96,1.97,0,0.78
+169,,Radinio Balker,0.03,0,61.9,0.26,0.03,0
+170,,Brian Brobbey,0.41,0.59,38.1,2.03,0.06,0
+171,,Koki Saito,0.27,0.04,46.25,1.27,0,0
+172,,Dani de Wit,0.28,0.11,60,1.22,0.11,0
+173,,Taylor Booth,0.08,0.13,41.67,1.13,0,0
+174,,Arianit Ferati,0.04,0,66.67,0.59,0,0
+175,,Willum Thor Willumsson,0.3,0.26,43.48,1.63,0,0
+176,,Sem Steijn,0.22,0.07,50,1.48,0.04,0
+177,,Robbin Ruiter,0,0,100,0,0,0
+178,,Mimoun Mahi,0.07,0,41.67,0.79,0,0
+179,,Mees Hilgers,0.04,0.04,68.75,0.25,0,0
+180,,Mika Biereth,0.17,0,66.67,1.17,0,0
+181,,Mees Hoedemakers,0.1,0.03,60,1.07,0,0
+182,,Jeffrey de Lange,0,0,100,0,0,0
+183,,Đorđe Mihailović,0.07,0.13,42.86,0.67,0.07,0
+184,,Younes Namli,0.04,0.08,51.22,1.04,0,0
+185,,George Cox,0,0,42.86,0.67,0,0
+186,,Tijjani Noslin,0.16,0.03,57.14,1.26,0,0
+187,,André Ramalho,0,0.04,0,0.5,0,0
+188,,Nick Viergever,0.11,0,12.5,0.16,0.05,0
+189,,Joris Kramer,0,0,100,0.23,0,0
+190,,Florian Grillitsch,0,0,0,0.1,0,0
+191,,Joost van Aken,0,0,100,0.47,0,0
+192,,Kjell Scherpen,0,0,100,0,0,0
+193,,Liam van Gelderen,0.06,0.06,54.84,0.47,0,0
+194,,Phillipp Mwene,0,0.04,42.11,0.44,0,0
+195,,Joey Pelupessy,0.05,0,50,0.53,0,0
+196,,Syb van Ottele,0.05,0.05,100,0.35,0,0
+197,,Guus Til,0.3,0.43,30,1.67,0.1,0
+198,,Bobby Adekanye,0.19,0.06,53.06,1.48,0,0
+199,,Moussa Sylla,0.1,0.1,35.71,1,0,0
+200,,Othman Boussaid,0.09,0.03,32.89,1.25,0,0
+201,,Oğuzhan Özyakup,0.14,0,56.52,0.5,0,0
+202,,Peer Koopmeiners,0,0,58.33,0.36,0,0
+203,,Anass Salah-Eddine,0,0,66.67,0.43,0,0
+204,,Marcus Pedersen,0.03,0.03,60.38,0.66,0,0
+205,,Mike te Wierik,0,0,50,0.21,0,0
+206,,Remko Pasveer,0,0,0,0,0,0
+207,,Million Manhoef,0.27,0.09,38.17,2.36,0,0
+208,,Fábio Silva,0.29,0.29,44,1.36,0.14,0
+209,,Calvin Twigt,0.06,0.13,50,0.38,0.06,0
+210,,Norbert Alblas,0,0,0,0,0,0
+211,,Youri Regeer,0,0,0,0,0,0
+212,,Leon Bergsma,0,0.04,100,0.29,0,0
+213,,Walter Benítez,0,0,0,0,0,0
+214,,Mickey van der Hart,0,0,100,0,0,0
+215,,Ximo Navarro,0,0.07,75,0.47,0,0
+216,,Benaissa Benamar,0.07,0,66.67,0.31,0.07,0
+217,,Evert Linthorst,0.04,0.04,40,0.39,0,0
+218,,Jorrel Hato,0,0,73.33,0.09,0,0
+219,,Shurandy Sambo,0.07,0,51.61,0.57,0,0
+220,,Amin Younes,0,0,45,0.3,0,0
+221,,Lucas Bernadou,0.07,0,51.28,0.33,0,0
+222,,Ivo Pinto,0,0.03,43.64,0.21,0,0
+223,,Zakaria Bakkali,0.17,0.06,50,0.83,0,0
+224,,Antoine Colassin,0.14,0,39.13,1.05,0,0
+225,,Andri Fannar Baldursson,0,0,100,0.09,0,0
+226,,Damon Mirani,0.1,0.1,0,0.52,0.06,0
+227,,Lequincio Zeefuik,0.14,0.07,71.43,0.93,0,0
+228,,Julian Lelieveld,0.06,0.06,61.11,0.32,0,0
+229,,Mats Deijl,0.06,0.03,62.96,0.44,0,0
+230,,Rami Al Hajj,0,0.12,54.55,1.18,0,0
+231,,Dominik Oroz,0.06,0,0,0.44,0,0
+232,,Miliano Jonathans,0,0.08,60,0.67,0,0
+233,,Ibrahim El Kadiri,0,0,45.16,1.18,0,0
+234,,Oliver Antman,0.18,0,52.38,1.09,0,0
+235,,Florian Jozefzoon,0.19,0.15,43.24,1.12,0,0
+236,,Robert Mühren,0.18,0.39,35.71,2.04,0.04,0
+237,,Olivier Boscagli,0.14,0,0,0.14,0.14,0
+238,,Deron Payne,0,0,50,0,0,0
+239,,Federico Mattiello,0,0,42.86,0.33,0,0
+240,,Jeffrey Bruma,0,0,100,0.1,0,0
+241,,Oliver Valaker Edvardsen,0.25,0.18,33.33,1.46,0.04,0
+242,,Ole Romeny,0.33,0.24,31.34,1.52,0.06,0
+243,,Jose Fontán,0.05,0,75,0.33,0,0
+244,,Elayis Tavsan,0.09,0.16,49.65,2.22,0,0
+245,,Enric Llansana,0,0,68.75,0.43,0,0
+246,,Gerrit Nauber,0,0,100,0.42,0,0
+247,,Lazaros Lamprou,0.14,0.14,53.33,1.14,0.04,0
+248,,Kacper Kozłowski,0.07,0.03,41.74,1.31,0,0
+249,,Mark van der Maarel,0,0.03,0,0.24,0,0
+250,,Kenzo Goudmijn,0.12,0.06,54.65,1.06,0,0
+251,,Perr Schuurs,0,0,0,0,0,0
+252,,Joël Drommel,0,0,0,0,0,0
+253,,Keziah Veendorp,0,0,65.38,0.27,0,0
+254,,Úmaro Embaló,0.11,0.04,48,0.78,0.04,0
+255,,Francesco Antonucci,0.12,0,66.67,1.65,0,0
+256,,Hidde ter Avest,0,0,37.5,0.2,0,0
+257,,Matúš Bero,0.16,0.1,33.85,1.9,0,0
+258,,Jamal Amofa,0,0,69.77,0.13,0,0
+259,,Achraf Douiri,0,0,61.54,0.33,0,0
+260,,Florian Krüger,0.18,0.18,20,0.77,0,0
+261,,Daleho Irandust,0,0.12,60,0.71,0,0
+262,,Lars Nieuwpoort,0,0,0,0.1,0,0
+263,,Owen Wijndal,0,0,66.67,0.4,0,0
+264,,Souffian El Karouani,0.06,0,39.51,0.91,0,0
+265,,Marco van Ginkel,0.14,0.07,33.33,1.36,0.07,0
+266,,Jonathan de Guzmán,0.1,0,50,0.38,0,4.76
+267,,Thorgan Hazard,0.11,0,87.5,0.56,0,0
+268,,Pedro Marques,0.17,0.17,28.57,0.7,0,0
+269,,Magnus Mattsson,0.16,0.4,51.25,1.48,0.08,0
+270,,Finn Stokkers,0.13,0.29,26.67,1.67,0,0
+271,,Tomáš Suslov,0.03,0,53.06,1.83,0,0
+272,,Roy Kuijpers,0,0,45,0.19,0,0
+273,,Mayckel Lahdo,0.08,0.12,59.46,0.48,0,0
+274,,Floris Smand,0,0,75,0.17,0,0
+275,,Hobie Verhulst,0,0,0,0,0,0
+276,,Mohamed Bouchouari,0.04,0,46.34,1.12,0,0
+277,,Mathew Ryan,0,0,0,0.06,0,0
+278,,Silvester van der Water,0.04,0.17,36.11,0.74,0,0
+279,,Mikkel Duelund,0.07,0.2,51.85,1.2,0.07,0
+280,,Bartosz Białek,0.2,0.16,44.12,1.4,0,0
+281,,Alfons Sampsted,0,0,25,0.17,0,0
+282,,Nikolai Baden Frederiksen,0.15,0.08,50,1.92,0,0
+283,,Yassin Oukili,0.1,0.06,58.82,1.1,0,0
+284,,Pelle van Amersfoort,0.16,0.16,31.25,1.84,0.11,0
+285,,Julius Dirksen,0,0,55.56,0.37,0,0
+286,,Yassin Ayoub,0,0,80,0.53,0,0
+287,,Ibrahim Cissoko,0.08,0.04,47.06,0.92,0,0
+288,,Jasper ter Heide,0.25,0,100,0.25,0,0
+289,,Xander Blomme,0.13,0,50,0.38,0,0
+290,,Maxim Dekker,0.08,0,0,0.15,0,0
+291,,Philipp Max,0,0.14,33.33,0.29,0,0
+292,,Ragnar Oratmangoen,0,0.05,52.38,0.79,0,0
+293,,Carlos Vinícius,0,1,0,1,0,0
+294,,Silvano Vos,0,0,100,1,0,0
+295,,Fedde De Jong,0,0,100,0,0,0
+296,,Vicente Besuijen,0,0,50,0.5,0,0
+297,,Hussein Ali,0,0,0,0,0,0
+298,,Mexx Meerdink,0,0.17,66.67,0.83,0,0
+299,,Bart Ramselaar,0,0,50,0.89,0,0
+300,,Arthur Zagre,0,0.09,62.5,0.55,0,0
+301,,Lorenzo Burnet,0,0,46.67,0.16,0,0
+302,,Vurnon Anita,0.06,0,63.16,0.26,0.03,0
+303,,Mathias Kjølø,0,0,25,0.41,0,0
+304,,Christos Tzolis,0.1,0,50,1.1,0,0
+305,,Serano Seymor,0.05,0,80,0.1,0.05,0
+306,,Neraysho Kasanwirjo,0,0,52.94,0.4,0,0
+307,,Muhammet Tunahan Tasci,0,0,50,0.3,0,0
+308,,Jurien Gaari,0,0.09,56.52,0.24,0,0
+309,,Lorenzo Lucca,0.14,0.29,0,1.07,0.07,0
+310,,Youri Baas,0,0,100,0.33,0,0
+311,,Laros Duarte,0.08,0.04,48.48,1.16,0,0.4
+312,,Mario Engels,0.11,0,50,0.11,0,0
+313,,Bilal Ould-Chikh,0.12,0,52.08,1.06,0,0
+314,,Doke Schmidt,0,0,33.33,0.2,0,0
+315,,Derry Murkin,0,0.06,50.68,0.81,0,0
+316,,Sekou Sylla,0,0,66.67,0.2,0,0
+317,,Fredrik Oppegård,0,0,92.31,0.18,0,0
+318,,Ruben Kluivert,0,0,100,0.08,0,0
+319,,Mitchell Paulissen,0.07,0.1,52.78,1.14,0.03,0
+320,,Nikolas Agrafiotis,0.12,0.24,53.85,0.94,0.06,0
+321,,Adrian Fein,0,0,50,0.21,0,0
+322,,Tibor Halilović,0,0,53.33,1.05,0,0
+323,,Daniel van Kaam,0.04,0.07,72.34,0.52,0,0
+324,,Roberts Uldriķis,0.04,0.21,84.62,1.54,0,0
+325,,Pelle Clement,0.06,0.09,44.62,0.85,0,0
+326,,Sai Van Wermeskerken,0.04,0,55.56,0.63,0,0
+327,,Mees de Wit,0.09,0,75,0.36,0,0
+328,,Ahmed El Messaoudi,0.08,0.08,62.5,1.08,0,0
+329,,Ismael Saibari,0,0.29,41.18,1.06,0,0
+330,,Jan de Boer,0,0,0,0,0,0
+331,,Lennerd Daneels,0,0,16.67,0,0,0
+332,,Richairo Živković,0.16,0.25,14.29,1.53,0,0
+333,,Jari Vlak,0.03,0,41.18,0.58,0,0
+334,,Peter Leeuwenburgh,0,0,0,0,0,0
+335,,Che Nunnely,0.08,0.08,55,0.85,0.08,0
+336,,Francisco Conceição,0,0.16,43.33,1,0,0
+337,,Marin Šverko,0,0,75,0,0,0
+338,,Daan Rots,0,0.05,42.86,0.55,0,0
+339,,Anthony Musaba,0.06,0,46.67,0.69,0,0
+340,,Gaetano Oristanio,0.04,0.19,49.04,2.04,0,0
+341,,Alex Bangura,0.03,0,77.42,0.31,0,0
+342,,Thom van Bergen,0,0.17,85.71,0.42,0,0
+343,,Florent Sanchez Da Silva,0.08,0,30.77,0.38,0,0
+344,,Tom Boere,0,0.23,100,0.69,0,0
+345,,Julen Lobete,0.14,0.28,41.79,1.17,0,0
+346,,Kian Fitz-Jim,0,0,0,1,0,0
+347,,Mimeirhel Benita,0,0,100,0,0,0
+348,,Rick Meissen,0,0,0,0.25,0,0
+349,,Elvis Manu,0,0,55,1.4,0,0
+350,,Michael Breij,0.06,0.13,36.36,0.88,0,0
+351,,Deroy Duarte,0.04,0,64.29,0.23,0,0
+352,,Ramon Pascal Lundqvist,0,0,33.33,0.46,0,0
+353,,Mohamed Sankoh,0.1,0.24,61.9,0.95,0,0
+354,,Jordy Bruijn,0.11,0.05,41.67,0.74,0,0
+355,,Riechedly Bazoer,0,0,57.14,0.38,0,0
+356,,Henk Veerman,0.14,0.21,61.54,1.17,0.03,0
+357,,Mohamed Taabouni,0,0,50,0.4,0,0
+358,,Victor Jensen,0.08,0,71.43,0.75,0,0
+359,,Anthony Descotte,0.17,0,66.67,0.67,0,0
+360,,Patrick Vroegh,0,0,40,0.63,0,0
+361,,Mitchell Dijks,0,0,66.67,0,0,0
+362,,Tomáš Hájek,0,0,0,0.14,0,0
+363,,Simon van Duivenbooden,0.11,0.11,0,0.33,0,0
+364,,Aaron Meijers,0,0,66.67,0.08,0,0
+365,,Thijmen Blokzijl,0,0,100,0.4,0,0
+366,,Rashaan Fernandes,0,0,46.67,0.58,0,0
+367,,Björn Johnsen,0.23,0.62,50,1.77,0,0
+368,,Walid Ould-Chikh,0.04,0.11,68.57,0.59,0,0
+369,,Brian Plat,0,0,33.33,0.41,0,0
+370,,Jahnoah Markelo,0,0,42.86,0.2,0,0
+371,,Richard Ledezma,0,0,100,0,0,0
+372,,Calvin Mac-Intosh,0,0.09,75,0.36,0,0
+373,,Gabriel Vidović,0.16,0.04,52.73,0.88,0,0
+374,,Milan Smit,0.08,0,36.36,0.62,0,0
+375,,Tesfaldet Tekie,0,0,33.33,0.38,0,0
+376,,Timon Wellenreuther,0,0,0,0,0,0
+377,,Maxime Awoudja,0,0.1,0,0.2,0,0
+378,,Doğan Erdoğan,0,0,73.91,0.07,0,0
+379,,Remco Balk,0.03,0.17,40.74,0.67,0,0
+380,,Jeremy Antonisse,0.08,0.38,58.33,1.77,0,0
+381,,Zakaria Labyad,0.14,0,0,0.57,0,0
+382,,Daishawn Redan,0.07,0.36,25,1.14,0.07,0
+383,,Felix Mambimbi,0,0,9.09,0.5,0,0
+384,,Metehan Güçlü,0,0,0,1,0,0
+385,,Flip Klomp,0,0,0,0,0,0
+386,,Joel Pereira,0,0,0,0,0,0
+387,,Yahya Kalley,0,0,60,0.2,0,0
+388,,Martijn Berden,0,0,25,0.6,0,0
+389,,Pedro Alemañ Serna,0,0,66.67,0.4,0,0
+390,,Django Warmerdam,0,0,0,0,0,0
+391,,Kevin Felida,0,0,50,0.17,0,0
+392,,Zinho Vanheusden,0,0,0,0.43,0,0
+393,,Max Bruns,0,0,33.33,0.11,0,0
+394,,Simon Olsson,0,0.06,60,0.39,0,0
+395,,Michael Verrips,0,0,0,0,0,0
+396,,Yusuf Barasi,0,0.18,33.33,0.55,0,0
+397,,Naoki Maeda,0,0.09,37.5,0.55,0,0
+398,,Reda Kharchouch,0.07,0.17,41.67,1,0,0
+399,,Fernando Pacheco,0,0.11,66.67,0.22,0,0
+400,,Enzo Cornelisse,0,0.05,75,0.4,0,0
+401,,Couhaib Driouech,0.09,0.24,47.14,1.52,0.03,0
+402,,Mads Bech Sørensen,0,0,100,0.27,0,0
+403,,Denilho Cleonise,0.08,0,55.56,0.23,0,0
+404,,Rocco Robert Shein,0,0,66.67,0.4,0,0
+405,,Roel Janssen,0,0,0,0,0,0
+406,,Jamie Jacobs,0.07,0.3,52.38,1.74,0,0
+407,,Zico Buurmeester,0.14,0,0,0.14,0,0
+408,,Gianmarco Cangiano,0,0,50,0.2,0,0
+409,,Xavier Mous,0,0,0,0,0,0
+410,,Jeremy Van Mullem,0,0.04,37.5,0.33,0,0
+411,,Wout Brama,0,0,0,0.09,0,0
+412,,Thomas Buitink,0,0.05,55,0.57,0,0
+413,,Oskar Buur,0.06,0,46.15,0.25,0,0
+414,,Sebbe Augustijns,0,0,0,0.17,0,0
+415,,David Sambissa,0.06,0,20,0.44,0,0
+416,,Djevencio van der Kust,0,0.13,20,0.38,0,0
+417,,Jasin Assehnoun,0.03,0,41.38,0.59,0,0
+418,,Jacky Donkor,0,0,60,0.5,0,0
+419,,Josh Flint,0,0,60,0.25,0,0
+420,,Vasilios Sourlis,0,0,0,0.5,0,0
+421,,Youri Schoonderwaldt,0,0,0,0,0,0
+422,,Antoni Milambo,0,0,0,0.33,0,0
+423,,Lucas Ocampos,0,0,0,1.25,0,0
+424,,Ben Scholte,0,0,100,0.43,0,0
+425,,Yorbe Vertessen,0,0.25,25,0.38,0,0
+426,,Saïd Bakari,0,0.04,53.33,0.38,0,0
+427,,Sven Nieuwpoort,0,0,0,0.26,0,0
+428,,Mauro Júnior,0,0,62.5,0.5,0,0
+429,,Aimar Sher,0,0,100,0.67,0,0
+430,,Luuk Wouters,0,0,33.33,0,0,0
+431,,Luciano Valente,0,0.1,66.67,0.4,0,0
+432,,Romaric Yapi,0,0,50,0.44,0,0
+433,,Stipe Radić,0,0,0,0,0,0
+434,,Mike van Duinen,0,0.07,22.22,0.86,0,0
+435,,Dennis Vos,0,0,50,0.17,0,0
+436,,Daan Reiziger,0,0,0,0,0,0
+437,,Ezequiel Bullaude,0,0.33,62.5,0.78,0,0
+438,,Alex Timossi Andersson,0,0.08,16.67,0.42,0,0
+439,,Sylla Sow,0.04,0.13,48,0.58,0,0
+440,,Fredrik André Bjørkan,0,0,0,1,0,0
+441,,Chris Lokesa,0,0,0,0,0,0
+442,,Givairo Read,0,0,0,0,0,0
+443,,Jan Bekkema,0,0,0,0,0,0
+444,,Lisandro Magallán,0,0,0,0.5,0,0
+445,,Elias Hoff Melkersen,0,0,100,0,0,0
+446,,Aventis Aventisian,0,0,0,0,0,0
+447,,Vincent Pichel,0,0,0,0.25,0,0
+448,,Azzeddine Toufiqui,0,0,50,0.2,0,0
+449,,Mickael Tirpan,0,0,33.33,0.4,0,0
+450,,Mohammed Tahiri,0,0,0,0.17,0,0
+451,,Jason Lokilo,0,0,14.29,0.43,0,0
+452,,Terry Sanniez,0,0,0,0,0,0
+453,,Noah Naujoks,0,0,50,0.33,0,0
+454,,Cole Bassett,0,0.09,33.33,0.45,0,0
+455,,Nathan Markelo,0,0.07,33.33,0.07,0,0
+456,,Joshua Eijgenraam,0,0,100,0.31,0,0
+457,,Rui Mendes,0.06,0.11,23.91,1,0,0
+458,,Raphaël Eyongo,0,0.2,100,0.2,0,0
+459,,Eric Oelschlägel,0,0,0,0,0,0
+460,,Paulos Abraham,0,0.25,40,1.38,0,0
+461,,Pim Saathof,0,0,0,0.33,0,0
+462,,Rémy Vita,0.07,0.04,54.35,0.33,0,0
+463,,Mattijs Branderhorst,0,0,0,0,0,0
+464,,Darius Johnson,0,0,100,0,0,0
+465,,Jordi Blom,0,0,0,0,0,0
+466,,Danny Hoesen,0,0,0,0,0,0
+467,,Thierry Lutonda,0.03,0.12,50,0.52,0,0
+468,,Nathan Tjoe-A-On,0.03,0,42.11,0.17,0,0
+469,,Ben Rienstra,0,0,100,0.25,0,0
+470,,Rami Kaib,0.05,0.05,23.53,0.33,0.05,0
+471,,Arnaud Luzayadio,0,0,0,0,0,0
+472,,Daan Huisman,0,0,0,0,0,0
+473,,Gyan de Regt,0,0,0,0,0,0
+474,,Imran Nazih,0,0,100,0,0,0
+475,,Ilias Bronkhorst,0,0,0,0.25,0,0
+476,,Omar Rekik,0,0,0,0,0,0
+477,,Daniel Karlsbakk,0,0,28.57,0.1,0,0
+478,,Isak Dybvik Määttä,0,0.03,49.37,0.27,0,0
+479,,Damil Dankerlui,0,0.06,40,0.17,0,0
+480,,Oussama Darfalou,0,0.25,33.33,0.75,0,0
+481,,Ferro,0,0,100,0.56,0,0
+482,,Derensili Sanches Fernandes,0,0,0,0,0,0
+483,,Matěj Chaluš,0,0,0,0.38,0,0
+484,,Nordin Musampa,0,0,14.29,0.13,0,0
+485,,Toni Domgjoni,0,0.14,25,0.71,0,0
+486,,Fodé Fofana,0,0,50,0,0,0
+487,,Patrick Joosten,0,0,0,0,0,0
+488,,Maurilio de Lannoy,0,0,50,0,0,0
+489,,Luca Everink,0,0,0,0,0,0
+490,,Dean James,0,0,12.5,0.14,0,0
+491,,Billy van Duijl,0,0,100,0,0,0
+492,,Michael Heylen,0,0,0,0,0,0
+493,,Albert Lottin,0,0,40,1,0,0
+494,,Mike van Beijnen,0,0,0,0,0,0
+495,,Joey Antonioli,0,0,0,0,0,0
+496,,Jorg Schreuders,0,0,50,0.6,0,0
+497,,Charles-Andreas Brym,0,0,0,0,0,0
+498,,Justin Bakker,0,0,0,0,0,0
+499,,Yanick van Osch,0,0,0,0,0,0
+500,,Jeroen Houwen,0,0,0,0,0,0
+501,,Maikel Kieftenbeld,0,0,0,0,0,0
+502,,Bret Minnema,0,0,0,0,0,0
+503,,Hans Mulder,0,0,0,0,0,0
+504,,Timo Zaal,0,0,0,0,0,0
+505,,Casper Staring,0,0,0,0,0,0
+506,,Luuk Admiraal,0,0,0,0,0,0
+507,,Dylan van Wageningen,0,0,0,0,0,0
+508,,Rayvien Rosario,0,0,0,0,0,0
+509,,Dano Lourens,0,0,0,0,0,0
+510,,Sander Sybrandy,0,0,0,0,0,0
+511,,Christian Kjelder Rasmussen,0,0,100,0.5,0,0
+512,,Patrick Brouwer,0,0,0,0,0,0
