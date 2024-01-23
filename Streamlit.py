@@ -13,8 +13,9 @@ import streamlit as st
 @st.cache
 def importar_datos(posicion):
     filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv"
-    df = pd.read_csv(filename)
+    df = pd.read_csv(filename, encoding='ISO-8859-1')
     return df
+
 
 
 st.write("Bienvenido a la página web de Fútbol Estadísticas!")
