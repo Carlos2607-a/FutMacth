@@ -28,6 +28,11 @@ def buscar_jugadores_similares_defensas(nombre):
     model.fit(features_scaled)
     caracteristicas_grafico = ['Errors lead to goal','Interceptions','Penalty committed','Clearances','Tackles','Dribbled past','Total passes']
 
+    columnas_a_dividir = ['Total passes','Accurate passes %', 'Accurate final third passes',
+       'Accurate long balls %','Aerial duels won %', 'Total duels won %']
+
+    # Divide todos los datos de las columnas por 10
+    Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
     jugador = Data[Data['Name'] == nombre]
 
     Clearances_media = Data["Clearances"].mean()
@@ -82,7 +87,7 @@ def buscar_jugadores_similares_defensas(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 10]  # Ajusta este rango según tus datos
+                    range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
             showlegend=True
         )
@@ -179,6 +184,10 @@ def buscar_jugadores_similares_delanteros(nombre):
     model.fit(features_scaled)
     caracteristicas_grafico = ['Big chances missed','Big chances created','Headed goals','Total shots','Goals','Was fouled','Assists','Set piece conversion %','Accurate passes %','Successful dribbles %','Total duels won %','Aerial duels won %']
     
+    columnas_a_dividir = ['Successful dribbles %', 'Accurate passes %', 'Aerial duels won %','Total duels won %']
+
+    # Divide todos los datos de las columnas por 10
+    Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
 
     jugador = Data[Data['Name'] == nombre]
 
@@ -235,7 +244,7 @@ def buscar_jugadores_similares_delanteros(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 10]  # Ajusta este rango según tus datos
+                    range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
             showlegend=True
         )
