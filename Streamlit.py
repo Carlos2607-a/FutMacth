@@ -12,10 +12,10 @@ import streamlit as st
 # Usamos el decorador de caché para almacenar los resultados de esta función
 @st.cache
 def importar_datos(posicion):
-    filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv.csv"
+    filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv"
     df = pd.read_csv(filename)
-    # Aquí puedes agregar código para optimizar la memoria del DataFrame si es necesario
     return df
+
 
 st.write("Bienvenido a la página web de Fútbol Estadísticas!")
 
