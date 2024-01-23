@@ -25,5 +25,8 @@ opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
 dataframe = importar_datos(opcion)
 # Aquí puedes agregar código para mostrar el DataFrame en tu aplicación Streamlit
 
+# Muestra el DataFrame
+st.dataframe(dataframe)
+
 
 
