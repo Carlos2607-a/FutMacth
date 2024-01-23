@@ -12,7 +12,7 @@ from IPython.display import display
 
 
 
-Data = pd.read_csv(r"C:\Users\Carlo\Desktop\Todo el proyecto\Data Posición\df_defensas_medias.csv")
+Data = pd.read_csv(r"/workspaces/Proyecto_Knn_Players/Data Posición/df_defensas_medias.csv")
 pd.set_option('display.max_columns', None)
 
 Data = Data.fillna(0)
