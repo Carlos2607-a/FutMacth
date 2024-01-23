@@ -31,8 +31,7 @@ nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas busca
 
 if opcion == "defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
-elif opcion == "delanteros":
-    buscar_jugadores_similares_delanteros(nombre_jugador)
+
     
 
 
