@@ -6,7 +6,6 @@ import unicodedata
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
-from IPython.display import display
 import streamlit as st
 from Funciones import buscar_jugadores_similares_defensas
 
