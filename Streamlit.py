@@ -8,6 +8,8 @@ from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 import streamlit as st
 from Funciones import buscar_jugadores_similares_defensas
+from Funciones import buscar_jugadores_similares_delanteros
+
 
 # Configura la página para usar el modo ancho
 st.set_page_config(layout="wide")
@@ -31,6 +33,8 @@ nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas busca
 
 if opcion == "defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
+elif opcion == "delanteros":
+    buscar_jugadores_similares_delanteros()
 
 
 
