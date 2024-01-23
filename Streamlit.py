@@ -8,19 +8,22 @@ from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 import streamlit as st
 
+
+# Usamos el decorador de caché para almacenar los resultados de esta función
+@st.cache
 def importar_datos(posicion):
     filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv.csv"
-    return pd.read_csv(filename)
+    df = pd.read_csv(filename)
+    # Aquí puedes agregar código para optimizar la memoria del DataFrame si es necesario
+    return df
 
-print("Bienvenido a la página web de Fútbol Estadísticas!")
+st.write("Bienvenido a la página web de Fútbol Estadísticas!")
 
 opciones = ["delanteros", "medio", "defensas", "porteros"]
-for i, opcion in enumerate(opciones, 1):
-    print(f"{i}. {opcion}")
+opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
 
-numero = int(input("¿Qué posición deseas consultar? (ingresa el número correspondiente): "))
-posicion = opciones[numero - 1]
+dataframe = importar_datos(opcion)
+# Aquí puedes agregar código para mostrar el DataFrame en tu aplicación Streamlit
 
-dataframe = importar_datos(posicion)
 
 
