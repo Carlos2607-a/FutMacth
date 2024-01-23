@@ -9,7 +9,7 @@ import seaborn as sns
 import streamlit as st
 
 
-# Usamos el decorador de caché para almacenar los resultados de esta función
+
 @st.cache
 def importar_datos(posicion):
     filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv"
@@ -24,7 +24,7 @@ opciones = ["delanteros", "medio", "defensas", "porteros"]
 opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
 
 dataframe = importar_datos(opcion)
-# Aquí puedes agregar código para mostrar el DataFrame en tu aplicación Streamlit
+
 
 
 
