@@ -7,67 +7,60 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 from IPython.display import display
+import streamlit as st
 
 
+def buscar_jugadores_similares_defensas(nombre, caracteristicas_grafico):
 
+    Data = pd.read_csv(r"/workspaces/Proyecto_Knn_Players/Data Posición/df_defensas_medias.csv")
+    pd.set_option('display.max_columns', None)
 
+    Data.fillna((0),inplace=True)
 
-Data = pd.read_csv(r"/workspaces/Proyecto_Knn_Players/Data Posición/df_defensas_medias.csv")
-pd.set_option('display.max_columns', None)
+    Columna_habilidades = Data.columns.drop(["Name", "League"])
+    features = Data[Columna_habilidades]
+    # Crea un objeto MinMaxScaler
+    scaler = MinMaxScaler()
+    # Ajusta el escalador a tus datos y luego transforma tus datos
+    features_scaled = scaler.fit_transform(features)
+    # Inicializa el modelo NearestNeighbors
+    model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
+    # Ajusta el modelo a tus datos
+    model.fit(features_scaled)
+    caracteristicas_grafico = ['Errors lead to goal','Interceptions','Penalty committed','Clearances','Tackles','Dribbled past','Total passes']
+    # Función para normalizar nombres (ignorar mayúsculas y acentos)
 
-Data = Data.fillna(0)
-
-columnas_a_dividir = ['Total passes','Accurate passes %', 'Accurate final third passes',
+    columnas_a_dividir = ['Total passes','Accurate passes %', 'Accurate final third passes',
        'Accurate long balls %','Aerial duels won %', 'Total duels won %']
 
-# Divide todos los datos de las columnas por 10
-Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
-
-Clearances_media = Data["Clearances"].mean()
-Clearances_min = Data["Clearances"].min()
-Clearances_max = Data["Clearances"].max()
-
-Aerial_duels_won_media = Data["Aerial duels won %"].mean()
-Aerial_duels_won_min = Data["Aerial duels won %"].min()
-Aerial_duels_won__max = Data["Aerial duels won %"].max()
-
-Goals_conceded_inside_media = Data["Goals conceded inside the box"].mean()
-Goals_conceded_inside_min = Data["Goals conceded inside the box"].min()
-Goals_conceded_inside_max = Data["Goals conceded inside the box"].max()
-
-Tackles_media = Data["Tackles"].mean()
-Tackles_min = Data["Tackles"].min()
-Tackles_max = Data["Tackles"].max()
-
-Accurate_final_third_passesmedia = Data["Accurate final third passes"].mean()
-Accurate_final_third_passesmin = Data["Accurate final third passes"].min()
-Accurate_final_third_passesmax = Data["Accurate final third passes"].max()
-
-creadas_media = Data["Big chances created"].mean()
-creadas_min = Data["Big chances created"].min()
-creadas_max = Data["Big chances created"].max()
-
-
-Columna_habilidades = Data.columns.drop(["Name", "League"])
-features = Data[Columna_habilidades]
-# Crea un objeto MinMaxScaler
-scaler = MinMaxScaler()
-# Ajusta el escalador a tus datos y luego transforma tus datos
-features_scaled = scaler.fit_transform(features)
-# Inicializa el modelo NearestNeighbors
-model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
-# Ajusta el modelo a tus datos
-model.fit(features_scaled)
-caracteristicas_grafico = ['Errors lead to goal','Interceptions','Penalty committed','Clearances','Tackles','Dribbled past','Total passes']
-# Función para normalizar nombres (ignorar mayúsculas y acentos)
-def normalizar_nombre(nombre):
-    nombre = nombre.lower()
-    nombre = unicodedata.normalize('NFD', nombre)
-    nombre = nombre.encode('ascii', 'ignore').decode("utf-8")
-    return nombre
-
-def buscar_jugadores_similares(nombre, caracteristicas_grafico):
+    # Divide todos los datos de las columnas por 10
+    Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
     jugador = Data[Data['Name'] == nombre]
+
+    Clearances_media = Data["Clearances"].mean()
+    Clearances_min = Data["Clearances"].min()
+    Clearances_max = Data["Clearances"].max()
+    
+    Aerial_duels_won_media = Data["Aerial duels won %"].mean()
+    Aerial_duels_won_min = Data["Aerial duels won %"].min()
+    Aerial_duels_won__max = Data["Aerial duels won %"].max()
+    
+    Goals_conceded_inside_media = Data["Goals conceded inside the box"].mean()
+    Goals_conceded_inside_min = Data["Goals conceded inside the box"].min()
+    Goals_conceded_inside_max = Data["Goals conceded inside the box"].max()
+    
+    Tackles_media = Data["Tackles"].mean()
+    Tackles_min = Data["Tackles"].min()
+    Tackles_max = Data["Tackles"].max()
+    
+    Accurate_final_third_passesmedia = Data["Accurate final third passes"].mean()
+    Accurate_final_third_passesmin = Data["Accurate final third passes"].min()
+    Accurate_final_third_passesmax = Data["Accurate final third passes"].max()
+    
+    creadas_media = Data["Big chances created"].mean()
+    creadas_min = Data["Big chances created"].min()
+    creadas_max = Data["Big chances created"].max()
+    
     if len(jugador) == 0:
         return 'Jugador no encontrado'
     else:
@@ -78,7 +71,7 @@ def buscar_jugadores_similares(nombre, caracteristicas_grafico):
         
         # Agregar 'Media' a la lista de jugadores similares antes de mostrar el DataFrame
         jugadores_similares = pd.concat([jugadores_similares, Data[Data['Name'] == 'Media']])
-        display(jugadores_similares)
+        st.dataframe(jugadores_similares)
 
         # Escala todas las características de los jugadores similares
         fig = go.Figure()
@@ -100,7 +93,7 @@ def buscar_jugadores_similares(nombre, caracteristicas_grafico):
                 )),
             showlegend=True
         )
-        fig.show()
+        st.plotly_chart(fig)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
@@ -170,7 +163,5 @@ def buscar_jugadores_similares(nombre, caracteristicas_grafico):
           
    
         
-        plt.show()
+        st.pyplot.show()
         return
-    
-buscar_jugadores_similares('Cristian Romero', caracteristicas_grafico)
