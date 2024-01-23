@@ -19,6 +19,7 @@ def importar_datos(posicion):
     df = pd.read_csv(filename)
     return df
 
+
 st.write("Bienvenido a la página web de Fútbol Estadísticas!")
 
 opciones = ["delanteros", "medio", "defensas", "porteros"]
@@ -29,17 +30,7 @@ Data = importar_datos(opcion)
 nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas buscar")
 
 if opcion == "defensas":
-    # Asume que buscar_jugadores_similares_defensas() devuelve una figura de Plotly
-    fig = buscar_jugadores_similares_defensas(nombre_jugador)
-    
-    # Crea tres columnas con tamaños personalizados
-col1, col2, col3 = st.columns([1, 2, 1])
-
-# Coloca tu gráfico en la columna del medio
-with col2:
-    st.plotly_chart(fig)
-
-
+    buscar_jugadores_similares_defensas(nombre_jugador)
 
 
 
