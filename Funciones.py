@@ -162,5 +162,5 @@ def buscar_jugadores_similares_defensas(nombre):
           
    
         
-        st.pyplot()
+        st.pyplot(fig)
         return
