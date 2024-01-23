@@ -314,7 +314,7 @@ def buscar_jugadores_similares_delanteros(nombre):
         axs[2, 1].set_ylabel('Big chances created')
         # Ajusta el layout para que no haya superposición de elementos
         plt.tight_layout()
-        plt.show()
+        st.pyplot(fig)
         return
     
 
