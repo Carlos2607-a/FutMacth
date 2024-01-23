@@ -11,7 +11,7 @@ import streamlit as st
 
 def buscar_jugadores_similares_defensas(nombre):
 
-    Data = pd.read_csv("/workspaces/Proyecto_Knn_Players/Data Posición/df_defensas_medias.csv")
+    Data = pd.read_csv("Data Posición/df_defensas_medias.csv")
     pd.set_option('display.max_columns', None)
 
     Data.fillna((0),inplace=True)

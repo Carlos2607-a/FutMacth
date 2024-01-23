@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 import streamlit as st
+from Funciones import buscar_jugadores_similares_defensas
 
 
 # Usamos el decorador de caché para almacenar los resultados de esta función
@@ -22,11 +23,14 @@ st.write("Bienvenido a la página web de Fútbol Estadísticas!")
 opciones = ["delanteros", "medio", "defensas", "porteros"]
 opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
 
-dataframe = importar_datos(opcion)
-# Aquí puedes agregar código para mostrar el DataFrame en tu aplicación Streamlit
+Data = importar_datos(opcion)
 
-# Muestra el DataFrame
-st.dataframe(dataframe)
+nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas buscar")
+
+if opcion == "defensas":
+    buscar_jugadores_similares_defensas(nombre_jugador)
+
+
 
 
 
