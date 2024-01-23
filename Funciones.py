@@ -95,7 +95,7 @@ def buscar_jugadores_similares_defensas(nombre):
         st.plotly_chart(fig)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
-        fig, axs = plt.subplots(3, 2, figsize=(50, 40))  # Ajusta el tamaño según sea necesario
+        fig, axs = plt.subplots(3, 2, figsize=(30, 40))  # Ajusta el tamaño según sea necesario
         # Gráfico de dispersión para Clearances
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Clearances'], color=colores[i % len(colores)], marker='o')
