@@ -7,20 +7,20 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 import streamlit as st
-from Funciones import buscar_jugadores_similares_defensas
 
-# Configura el título y la descripción de la aplicación
-st.title("Buscador de Jugadores Similares")
-st.write("Introduce el nombre del jugador que deseas buscar:")
+def importar_datos(posicion):
+    filename = f"/workspaces/Proyecto_Knn_Players/Data Posición/df_{posicion}_medias.csv.csv"
+    return pd.read_csv(filename)
 
-# Solicita al usuario que introduzca el nombre del jugador
-nombre_jugador = st.text_input("introduzca el nombre del jugador")
+print("Bienvenido a la página web de Fútbol Estadísticas!")
 
-# Convierte la entrada del usuario a minúsculas
-nombre_jugador = nombre_jugador.lower()
+opciones = ["delanteros", "medio", "defensas", "porteros"]
+for i, opcion in enumerate(opciones, 1):
+    print(f"{i}. {opcion}")
 
-# Llama a tu función con el nombre del jugador
-resultado = buscar_jugadores_similares_defensas(nombre_jugador)
+numero = int(input("¿Qué posición deseas consultar? (ingresa el número correspondiente): "))
+posicion = opciones[numero - 1]
 
-# Muestra el resultado
-st.write(resultado)
+dataframe = importar_datos(posicion)
+
+
