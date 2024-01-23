@@ -64,7 +64,7 @@ def buscar_jugadores_similares_defensas(nombre):
     else:
         jugador_scaled = scaler.transform(jugador[features.columns])  # Normalización para el modelo
         distancias, indices = model.kneighbors(jugador_scaled)
-        jugadores_similares = Data.iloc[indices[0][0:]]  # Excluimos el primer resultado porque será el jugador mismo
+        jugadores_similares = Data.iloc[indices[0][0:]] 
         colores = ['blue', 'green', 'red', 'cyan', 'magenta', 'yellow', 'black']
         
         # Agregar 'Media' a la lista de jugadores similares antes de mostrar el DataFrame
