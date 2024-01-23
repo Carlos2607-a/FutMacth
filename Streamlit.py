@@ -9,6 +9,8 @@ import seaborn as sns
 import streamlit as st
 from Funciones import buscar_jugadores_similares_defensas
 
+# Configura la página para usar el modo ancho
+st.set_page_config(layout="wide")
 
 # Usamos el decorador de caché para almacenar los resultados de esta función
 @st.cache
