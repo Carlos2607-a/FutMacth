@@ -83,8 +83,8 @@ def buscar_jugadores_similares_defensas(nombre):
             ))
         fig.update_layout(
             autosize=False,
-            width=600,
-            height=600,
+            width=850,
+            height=850,
             polar=dict(
                 radialaxis=dict(
                     visible=True,
