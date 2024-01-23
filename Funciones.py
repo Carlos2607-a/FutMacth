@@ -1,10 +1,9 @@
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objects as go
 import unicodedata
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
 import seaborn as sns
 import streamlit as st
 
@@ -18,8 +17,8 @@ def buscar_jugadores_similares_defensas(nombre):
 
     Columna_habilidades = Data.columns.drop(["Name", "League"])
     features = Data[Columna_habilidades]
-    # Crea un objeto StandardScaler
-    scaler = StandardScaler()
+    # Crea un objeto MinMaxScaler
+    scaler = MinMaxScaler()
     # Ajusta el escalador a tus datos y luego transforma tus datos
     features_scaled = scaler.fit_transform(features)
     # Inicializa el modelo NearestNeighbors
@@ -174,8 +173,8 @@ def buscar_jugadores_similares_delanteros(nombre):
 
     Columna_habilidades = Data.columns.drop(["Name", "League"])
     features = Data[Columna_habilidades]
-    # Crea un objeto StandardScaler
-    scaler = StandardScaler()
+    # Crea un objeto MinMaxScaler
+    scaler = MinMaxScaler()
     # Ajusta el escalador a tus datos y luego transforma tus datos
     features_scaled = scaler.fit_transform(features)
     # Inicializa el modelo NearestNeighbors
