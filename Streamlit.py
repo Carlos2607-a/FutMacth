@@ -32,12 +32,13 @@ if opcion == "defensas":
     # Asume que buscar_jugadores_similares_defensas() devuelve una figura de Plotly
     fig = buscar_jugadores_similares_defensas(nombre_jugador)
     
-    # Crea tres columnas
-    col1, col2, col3 = st.columns(3)
+    # Crea tres columnas con tamaños personalizados
+col1, col2, col3 = st.columns([1, 2, 1])
 
-    # Coloca tu gráfico en la columna del medio
-    with col2:
-        st.plotly_chart(fig)
+# Coloca tu gráfico en la columna del medio
+with col2:
+    st.plotly_chart(fig)
+
 
 
 
