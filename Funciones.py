@@ -10,7 +10,7 @@ from IPython.display import display
 import streamlit as st
 
 
-def buscar_jugadores_similares_defensas(nombre, caracteristicas_grafico):
+def buscar_jugadores_similares_defensas(nombre):
 
     Data = pd.read_csv(r"/workspaces/Proyecto_Knn_Players/Data Posición/df_defensas_medias.csv")
     pd.set_option('display.max_columns', None)

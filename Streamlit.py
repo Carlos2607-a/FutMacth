@@ -14,7 +14,7 @@ st.title("Buscador de Jugadores Similares")
 st.write("Introduce el nombre del jugador que deseas buscar:")
 
 # Solicita al usuario que introduzca el nombre del jugador
-nombre_jugador = st.text_input("")
+nombre_jugador = st.text_input("introduzca el nombre del jugador")
 
 # Convierte la entrada del usuario a minúsculas
 nombre_jugador = nombre_jugador.lower()
