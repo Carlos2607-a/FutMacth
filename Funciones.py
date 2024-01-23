@@ -9,7 +9,7 @@ import seaborn as sns
 import streamlit as st
 
 
-def buscar_jugadores_similares_defensas(nombre):
+def buscar_jugadores_similares_delanteros_defensas(nombre):
 
     Data = pd.read_csv("Data Posición/df_defensas_medias.csv")
     pd.set_option('display.max_columns', None)
@@ -26,7 +26,7 @@ def buscar_jugadores_similares_defensas(nombre):
     model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
     # Ajusta el modelo a tus datos
     model.fit(features_scaled)
-    caracteristicas_grafico = ['Errors lead to goal','Interceptions','Penalty committed','Goals','Missed','Dribbled past','Total passes']
+    caracteristicas_grafico = ['Errors lead to goal','Interceptions','Penalty committed','Clearances','Tackles','Dribbled past','Total passes']
     # Función para normalizar nombres (ignorar mayúsculas y acentos)
 
     columnas_a_dividir = ['Total passes','Accurate passes %', 'Accurate final third passes',
@@ -36,29 +36,29 @@ def buscar_jugadores_similares_defensas(nombre):
     Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
     jugador = Data[Data['Name'] == nombre]
 
-    Goals_media = Data["Goals"].mean()
-    Goals_min = Data["Goals"].min()
-    Goals_max = Data["Goals"].max()
+    Clearances_media = Data["Clearances"].mean()
+    Clearances_min = Data["Clearances"].min()
+    Clearances_max = Data["Clearances"].max()
     
     Aerial_duels_won_media = Data["Aerial duels won %"].mean()
     Aerial_duels_won_min = Data["Aerial duels won %"].min()
     Aerial_duels_won__max = Data["Aerial duels won %"].max()
     
-    Headed_goals_media = Data["Goals conceded inside the box"].mean()
-    Headed_goals_min = Data["Goals conceded inside the box"].min()
-    Headed_goals_max = Data["Goals conceded inside the box"].max()
+    Goals_conceded_inside_media = Data["Goals conceded inside the box"].mean()
+    Goals_conceded_inside_min = Data["Goals conceded inside the box"].min()
+    Goals_conceded_inside_max = Data["Goals conceded inside the box"].max()
     
-    Missed_media = Data["Missed"].mean()
-    Missed_min = Data["Missed"].min()
-    Missed_max = Data["Missed"].max()
+    Tackles_media = Data["Tackles"].mean()
+    Tackles_min = Data["Tackles"].min()
+    Tackles_max = Data["Tackles"].max()
     
-    Assists_media = Data["Accurate final third passes"].mean()
-    Assists_min = Data["Accurate final third passes"].min()
-    Assists_max = Data["Accurate final third passes"].max()
+    Accurate_final_third_passesmedia = Data["Accurate final third passes"].mean()
+    Accurate_final_third_passesmin = Data["Accurate final third passes"].min()
+    Accurate_final_third_passesmax = Data["Accurate final third passes"].max()
     
-    Big_chances_created_media = Data["Big chances created"].mean()
-    Big_chances_created_min = Data["Big chances created"].min()
-    Big_chances_created_max = Data["Big chances created"].max()
+    creadas_media = Data["Big chances created"].mean()
+    creadas_min = Data["Big chances created"].min()
+    creadas_max = Data["Big chances created"].max()
     
     if len(jugador) == 0:
         return 'Jugador no encontrado'
@@ -96,16 +96,16 @@ def buscar_jugadores_similares_defensas(nombre):
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 15))  # Ajusta el tamaño según sea necesario
-        # Gráfico de dispersión para Goals
+        # Gráfico de dispersión para Clearances
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals'], color=colores[i % len(colores)], marker='o')
-        for line in [Goals_max, Goals_media, Goals_min]:
+            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Clearances'], color=colores[i % len(colores)], marker='o')
+        for line in [Clearances_max, Clearances_media, Clearances_min]:
             axs[0, 0].axhline(y=line, color='r', linestyle='--')
-        axs[0, 0].set_title('Comparativa de Goals de los jugadores similares')
+        axs[0, 0].set_title('Comparativa de Clearances de los jugadores similares')
         axs[0, 0].set_xticks(range(len(jugadores_similares)))
         axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[0, 0].set_xlabel('Jugadores')
-        axs[0, 0].set_ylabel('Goals')
+        axs[0, 0].set_ylabel('Clearances')
         # Gráfico de dispersión para Aerial duels won %
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Aerial duels won %'], color=colores[i % len(colores)], marker='o')
@@ -119,27 +119,27 @@ def buscar_jugadores_similares_defensas(nombre):
         # Gráfico de dispersión para Goals conceded inside the box
         for i, name in enumerate(jugadores_similares['Name']):
             axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals conceded inside the box'], color=colores[i % len(colores)], marker='o')
-        for line in [Headed_goals_max, Headed_goals_media, Headed_goals_min]:
+        for line in [Goals_conceded_inside_max, Goals_conceded_inside_media, Goals_conceded_inside_min]:
             axs[1, 0].axhline(y=line, color='r', linestyle='--')
         axs[1, 0].set_title('Media de Goals conceded inside the box de los jugadores similares')
         axs[1, 0].set_xticks(range(len(jugadores_similares)))
         axs[1, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[1, 0].set_xlabel('Jugadores')
         axs[1, 0].set_ylabel('Goals conceded inside the box')
-        # Gráfico de dispersión para Missed
+        # Gráfico de dispersión para Tackles
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Missed'], color=colores[i % len(colores)], marker='o')
-        for line in [Missed_max, Missed_media, Missed_min]:
+            axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
+        for line in [Tackles_max, Tackles_media, Tackles_min]:
             axs[1, 1].axhline(y=line, color='r', linestyle='--')
-        axs[1, 1].set_title('Media de Missed de los jugadores similares')
+        axs[1, 1].set_title('Media de Tackles de los jugadores similares')
         axs[1, 1].set_xticks(range(len(jugadores_similares)))
         axs[1, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[1, 1].set_xlabel('Jugadores')
-        axs[1, 1].set_ylabel('Missed')
+        axs[1, 1].set_ylabel('Tackles')
         # Gráfico de dispersión para Accurate final third passes
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Accurate final third passes'], color=colores[i % len(colores)], marker='o')
-        for line in [Assists_max, Assists_media, Assists_min]:
+        for line in [Accurate_final_third_passesmax, Accurate_final_third_passesmedia, Accurate_final_third_passesmin]:
             axs[2, 0].axhline(y=line, color='r', linestyle='--')
         axs[2, 0].set_title('Media de Accurate final third passes de los jugadores similares')
         axs[2, 0].set_xticks(range(len(jugadores_similares)))
@@ -149,7 +149,7 @@ def buscar_jugadores_similares_defensas(nombre):
         # Gráfico de dispersión para Big chances created
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
-        for line in [Big_chances_created_max, Big_chances_created_media, Big_chances_created_min]:
+        for line in [creadas_max, creadas_media, creadas_min]:
             axs[2, 1].axhline(y=line, color='r', linestyle='--')
         axs[2, 1].set_title('Media de Total duels won % de los jugadores similares')
         axs[2, 1].set_xticks(range(len(jugadores_similares)))
@@ -165,3 +165,4 @@ def buscar_jugadores_similares_defensas(nombre):
         st.pyplot(fig)
         return
     
+
