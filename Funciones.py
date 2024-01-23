@@ -251,8 +251,8 @@ def buscar_jugadores_similares_delanteros(nombre):
         st.plotly_chart(fig)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
-        fig, axs = plt.subplots(3, 2, figsize=(20, 15))  # Ajusta el tamaño según sea necesario
-        # Gráfico de dispersión para Clearances
+        fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
+        # Gráfico de dispersión para Big chances missed
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances missed'], color=colores[i % len(colores)], marker='o')
         for line in [Missed_max, Missed_media, Missed_min]:
