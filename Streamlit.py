@@ -9,6 +9,7 @@ import seaborn as sns
 import streamlit as st
 from Funciones import buscar_jugadores_similares_defensas
 from Funciones import buscar_jugadores_similares_delanteros
+from Funciones import buscar_jugadores_similares_medios
 
 
 # Configura la página para usar el modo ancho
@@ -35,6 +36,8 @@ if opcion == "defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
 elif opcion == "delanteros":
     buscar_jugadores_similares_delanteros(nombre_jugador)
+elif opcion == "medios":
+    buscar_jugadores_similares_medios(nombre_jugador)
 
 
 
