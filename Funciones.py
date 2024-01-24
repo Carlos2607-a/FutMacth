@@ -535,19 +535,8 @@ def buscar_jugadores_similares_porteros(nombre):
                     range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
             showlegend=True
-            margin=dict(  # Aquí es donde ajustas los márgenes
-                l=0,  # Margen izquierdo
-                r=0,  # Margen derecho
-                b=0,  # Margen inferior
-                t=0,  # Margen superior
-                pad=0
-            ),
         )
-        col1, col2, col3 = st.columns(3)
-
-        with col2:
-            st.plotly_chart(fig)
-        
+        st.plotly_chart(fig)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
