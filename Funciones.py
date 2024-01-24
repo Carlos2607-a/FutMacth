@@ -511,7 +511,7 @@ def buscar_jugadores_similares_porteros(nombre):
         distancias, indices = model.kneighbors(jugador_scaled)
         jugadores_similares = Data.iloc[indices[0][0:]]  
         colores = ['blue', 'green', 'red', 'cyan', 'magenta', 'yellow', 'black']
-        
+    
         # Agregar 'Media' a la lista de jugadores similares antes de mostrar el DataFrame
         jugadores_similares = pd.concat([jugadores_similares, Data[Data['Name'] == 'Media']])
         st.dataframe(jugadores_similares)
@@ -534,12 +534,21 @@ def buscar_jugadores_similares_porteros(nombre):
                     visible=True,
                     range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
-            showlegend=True
-        )
-        col1, col2, col3 = st.columns(3)
+            showlegend=True,
+            margin=dict(  # Aquí es donde ajustas los márgenes
+                l=0,  # Margen izquierdo
+                r=0,  # Margen derecho
+                b=0,  # Margen inferior
+                t=0,  # Margen superior
+                pad=0
+            ),
+    )
+    col1, col2, col3 = st.columns(3)
 
-        with col2:
-            st.plotly_chart(fig)
+    with col2:
+        st.plotly_chart(fig)
+
+
         
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
