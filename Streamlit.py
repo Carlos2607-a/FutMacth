@@ -14,15 +14,25 @@ from Funciones import buscar_jugadores_similares_porteros
 
 
 # Configura la página para usar el modo ancho
+@st.cache
+def importar_datos(posicion):
+    filename = f"Data Posición/df_{posicion}_medias.csv"
+    df = pd.read_csv(filename)
+    return df
+
 st.set_page_config(layout="wide")
 
-
-st.write("Bienvenido ala aplicación de FutMatch!")
+st.write("Bienvenido a la aplicación de FutMatch!")
 
 opciones = ["Delanteros", "Mediocampista", "Defensas", "Porteros"]
 opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
 
-nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas buscar")
+Data = importar_datos(opcion)
+
+# Supongamos que 'nombres' es una lista de todos los nombres de jugadores en tu base de datos
+nombres = Data['Name'].tolist()
+
+nombre_jugador = st.selectbox("Introduce el nombre del jugador que deseas buscar", nombres)
 
 if opcion == "Defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
@@ -34,8 +44,3 @@ elif opcion == "Porteros":
     buscar_jugadores_similares_porteros(nombre_jugador)
 else:
     pass
-
-
-
-
-
