@@ -527,14 +527,21 @@ def buscar_jugadores_similares_porteros(nombre):
             ))
         fig.update_layout(
             autosize=False,
-            width=500,
-            height=500,
+            width=1000,
+            height=1000,
             polar=dict(
                 radialaxis=dict(
                     visible=True,
                     range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
-            showlegend=True
+            showlegend=True,
+            margin=dict(  # Añade este bloque de código
+                l=100,  # Margen izquierdo
+                r=100,  # Margen derecho
+                b=100,  # Margen inferior
+                t=100,  # Margen superior
+                pad=10  # Espacio alrededor del gráfico
+            )
         )
         st.plotly_chart(fig)
         
