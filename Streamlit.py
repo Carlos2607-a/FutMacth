@@ -36,7 +36,7 @@ if opcion == "defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
 elif opcion == "delanteros":
     buscar_jugadores_similares_delanteros(nombre_jugador)
-elif opcion == "medios":
+elif opcion == "medio":
     buscar_jugadores_similares_medios(nombre_jugador)
 
 
