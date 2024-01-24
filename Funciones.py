@@ -527,8 +527,8 @@ def buscar_jugadores_similares_porteros(nombre):
             ))
         fig.update_layout(
             autosize=False,
-            width=1000,
-            height=1000,
+            width=500,
+            height=500,
             polar=dict(
                 radialaxis=dict(
                     visible=True,
