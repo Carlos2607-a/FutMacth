@@ -540,7 +540,7 @@ def buscar_jugadores_similares_porteros(nombre):
                 r=100,  # Margen derecho
                 b=150,  # Margen inferior
                 t=100,  # Margen superior
-                pad=10  # Espacio alrededor del gráfico
+                pad=100  # Espacio alrededor del gráfico
             )
         )
         st.plotly_chart(fig)
