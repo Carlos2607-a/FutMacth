@@ -536,8 +536,8 @@ def buscar_jugadores_similares_porteros(nombre):
                 )),
             showlegend=True,
             margin=dict(  # Añade este bloque de código
-                l=100,  # Margen izquierdo
-                r=100,  # Margen derecho
+                l=500,  # Margen izquierdo
+                r=500,  # Margen derecho
                 b=100,  # Margen inferior
                 t=100,  # Margen superior
                 pad=10  # Espacio alrededor del gráfico
