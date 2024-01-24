@@ -177,7 +177,7 @@ def buscar_jugadores_similares_delanteros(nombre):
     model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
     # Ajusta el modelo a tus datos
     model.fit(features_scaled)
-    caracteristicas_grafico = ['Big chances created','Big chances created','Assists','Total shots','Goals','Was fouled','Assists','Set piece conversion %','Accurate passes %','Successful dribbles %','Total duels won %','Tackles']
+    caracteristicas_grafico = ['Big chances missed','Big chances created','Headed goals','Total shots','Goals','Was fouled','Assists','Set piece conversion %','Accurate passes %','Successful dribbles %','Total duels won %','Aerial duels won %']
     
     jugador = Data[Data['Name'] == nombre]
 
@@ -242,7 +242,7 @@ def buscar_jugadores_similares_delanteros(nombre):
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
-        # Gráfico de dispersión para Big chances created
+        # Gráfico de dispersión para Big chances missed
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances missed'], color=colores[i % len(colores)], marker='o')
         for line in [Missed_max, Missed_media, Missed_min]:
@@ -307,153 +307,4 @@ def buscar_jugadores_similares_delanteros(nombre):
         st.pyplot(fig)
         return
     
-
-def buscar_jugadores_similares_medios(nombre):
-
-    Data = pd.read_csv("Data Posición/df_medio_medias.csv")
-    pd.set_option('display.max_columns', None)
-
-    Data.fillna((0),inplace=True)
-
-    Columna_habilidades = Data.columns.drop(["Name", "League"])
-    features = Data[Columna_habilidades]
-    # Crea un objeto MinMaxScaler
-    scaler = MinMaxScaler()
-    # Ajusta el escalador a tus datos y luego transforma tus datos
-    features_scaled = scaler.fit_transform(features)
-    # Inicializa el modelo NearestNeighbors
-    model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
-    # Ajusta el modelo a tus datos
-    model.fit(features_scaled)
-    caracteristicas_grafico = ['Total passes','Successful dribbles %', 'Accurate passes %', 'Accurate long balls %','Tackles','Total duels won %','Set piece conversion %','Total shots','Tackles','Interceptions','Fouls','Dribbled past','Assists','Big chances created','Goals','Was fouled','Accurate final third passes']
-    
-    jugador = Data[Data['Name'] == nombre]
-
-    creadas_media = Data["Big chances created"].mean()
-    creadas_min = Data["Big chances created"].min()
-    creadas_max = Data["Big chances created"].max()
-    
-    Assists_media = Data["Assists"].mean()
-    Assists_min = Data["Assists"].min()
-    Assists_max = Data["Assists"].max()
-    
-    Goals_media = Data["Goals"].mean()
-    Goals_min = Data["Goals"].min()
-    Goals_max = Data["Goals"].max()
-    
-    Tackles_media = Data["Tackles"].mean()
-    Tackles_min = Data["Tackles"].min()
-    Tackles_max = Data["Tackles"].max()
-    
-    Fouls_media = Data["Fouls"].mean()
-    Fouls_min = Data["Fouls"].min()
-    Fouls_max = Data["Fouls"].max()
-    
-    Interceptions_media = Data["Interceptions"].mean()
-    Interceptions_min = Data["Interceptions"].min()
-    Interceptions_max = Data["Interceptions"].max()
-    
-
-    
-    if len(jugador) == 0:
-        return 'Jugador no encontrado'
-    else:
-        jugador_scaled = scaler.transform(jugador[features.columns])  # Normalización para el modelo
-        distancias, indices = model.kneighbors(jugador_scaled)
-        jugadores_similares = Data.iloc[indices[0][0:]]  
-        colores = ['blue', 'green', 'red', 'cyan', 'magenta', 'yellow', 'black']
-        
-        # Agregar 'Media' a la lista de jugadores similares antes de mostrar el DataFrame
-        jugadores_similares = pd.concat([jugadores_similares, Data[Data['Name'] == 'Media']])
-        st.dataframe(jugadores_similares)
-
-        # Escala todas las características de los jugadores similares
-        fig = go.Figure()
-        for i, row in enumerate(jugadores_similares[caracteristicas_grafico].values):  # Usamos los valores originales aquí
-            fig.add_trace(go.Scatterpolar(
-                r=row,
-                theta=caracteristicas_grafico,
-                fill='toself',
-                name=jugadores_similares.iloc[i]['Name']
-            ))
-        fig.update_layout(
-            autosize=False,
-            width=1000,
-            height=1000,
-            polar=dict(
-                radialaxis=dict(
-                    visible=True,
-                    range=[-2, 7]  # Ajusta este rango según tus datos
-                )),
-            showlegend=True
-        )
-        st.plotly_chart(fig)
-        
-       # Configura una cuadrícula de subplots con 3 filas y 2 columnas
-        fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
-        # Gráfico de dispersión para Big chances created
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
-        for line in [creadas_max, creadas_media, creadas_min]:
-            axs[0, 0].axhline(y=line, color='r', linestyle='--')
-        axs[0, 0].set_title('Comparativa de Big chances created de los jugadores similares')
-        axs[0, 0].set_xticks(range(len(jugadores_similares)))
-        axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 0].set_xlabel('Jugadores')
-        axs[0, 0].set_ylabel('Big chances created')
-        # Gráfico de dispersión para la media Goals
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals'], color=colores[i % len(colores)], marker='o')
-        for line in [Goals_max, Goals_media, Goals_min]:
-            axs[0, 1].axhline(y=line, color='r', linestyle='--')
-        axs[0, 1].set_title('Comparativa de Goals de los jugadores similares')
-        axs[0, 1].set_xticks(range(len(jugadores_similares)))
-        axs[0, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 1].set_xlabel('Jugadores')
-        axs[0, 1].set_ylabel('Goals')
-        # Gráfico de dispersión para la media Assists
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Assists'], color=colores[i % len(colores)], marker='o')
-        for line in [Assists_max, Assists_media, Assists_min]:
-            axs[1, 0].axhline(y=line, color='r', linestyle='--')
-        axs[1, 0].set_title('Comparativa de Assists de los jugadores similares')
-        axs[1, 0].set_xticks(range(len(jugadores_similares)))
-        axs[1, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 0].set_xlabel('Jugadores')
-        axs[1, 0].set_ylabel('Assists')
-        # Gráfico de dispersión para Tackles
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
-        for line in [Tackles_max, Tackles_media, Tackles_min]:
-            axs[1, 1].axhline(y=line, color='r', linestyle='--')
-        axs[1, 1].set_title('Comparativa de Aerial duels won  de los jugadores similares')
-        axs[1, 1].set_xticks(range(len(jugadores_similares)))
-        axs[1, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 1].set_xlabel('Jugadores')
-        axs[1, 1].set_ylabel('Tackles')
-        # Gráfico de dispersión para la media Fouls
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[2, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Assists'], color=colores[i % len(colores)], marker='o')
-        for line in [Fouls_max, Fouls_media, Fouls_min]:
-            axs[2, 0].axhline(y=line, color='r', linestyle='--')
-        axs[2, 0].set_title('Comparativa de Fouls de los jugadores similares')
-        axs[2, 0].set_xticks(range(len(jugadores_similares)))
-        axs[2, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 0].set_xlabel('Jugadores')
-        axs[2, 0].set_ylabel('Fouls')
-        # Gráfico de dispersión para la media Interceptions
-        for i, name in enumerate(jugadores_similares['Name']):
-            axs[2, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
-        for line in [Interceptions_max, Interceptions_media, Interceptions_min]:
-            axs[2, 1].axhline(y=line, color='r', linestyle='--')
-        axs[2, 1].set_title('Comparativa de Interceptions de los jugadores similares')
-        axs[2, 1].set_xticks(range(len(jugadores_similares)))
-        axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 1].set_xlabel('Jugadores')
-        axs[2, 1].set_ylabel('Interceptions')
-        # Ajusta el layout para que no haya superposición de elementos
-
-        plt.tight_layout()
-        st.pyplot(fig)
-        return
 
