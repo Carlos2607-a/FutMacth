@@ -476,13 +476,6 @@ def buscar_jugadores_similares_porteros(nombre):
     Data = pd.read_csv("Data Posición/df_Porteros_medias.csv")
     pd.set_option('display.max_columns', None)
 
-    columnas_a_dividir = ['Successful dribbles %',
-       'Set piece conversion %','Total passes', 'Accurate passes %',
-       'Accurate final third passes', 'Accurate long balls %',
-       'Aerial duels won %', 'Total duels won %']
-    # Divide todos los datos de las columnas por 10
-    Data[columnas_a_dividir] = Data[columnas_a_dividir] / 10
-
     Data.fillna((0),inplace=True)
 
     Columna_habilidades = Data.columns.drop(["Name", "League"])
