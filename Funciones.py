@@ -457,7 +457,7 @@ def buscar_jugadores_similares_medios(nombre):
 
 
 def buscar_jugadores_similares_porteros(nombre):
-
+    
     Data = pd.read_csv("Data Posición/df_Porteros_medias.csv")
     pd.set_option('display.max_columns', None)
 
@@ -536,7 +536,11 @@ def buscar_jugadores_similares_porteros(nombre):
                 )),
             showlegend=True
         )
-        st.plotly_chart(fig)
+        col1, col2, col3 = st.columns(3)
+
+        with col2:
+            st.plotly_chart(fig)
+        
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
