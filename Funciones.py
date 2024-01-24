@@ -82,7 +82,7 @@ def buscar_jugadores_similares_defensas(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 11]  # Ajusta este rango según tus datos
+                    range=[-2, 7]  # Ajusta este rango según tus datos
                 )),
             showlegend=True,  # Asegúrate de poner una coma aquí
             margin=dict(  # Añade este bloque de código
@@ -239,7 +239,7 @@ def buscar_jugadores_similares_delanteros(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 11]  # Ajusta este rango según tus datos
+                    range=[-2, 6]  # Ajusta este rango según tus datos
                 )),
             showlegend=True,  # Asegúrate de poner una coma aquí
             margin=dict(  # Añade este bloque de código
@@ -392,7 +392,7 @@ def buscar_jugadores_similares_medios(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 11]  # Ajusta este rango según tus datos
+                    range=[-1, 10]  # Ajusta este rango según tus datos
                 )),
             showlegend=True,  # Asegúrate de poner una coma aquí
             margin=dict(  # Añade este bloque de código
@@ -547,7 +547,7 @@ def buscar_jugadores_similares_porteros(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-2, 11]  # Ajusta este rango según tus datos
+                    range=[-2, 5]  # Ajusta este rango según tus datos
                 )),
             showlegend=True,  # Asegúrate de poner una coma aquí
             margin=dict(  # Añade este bloque de código
