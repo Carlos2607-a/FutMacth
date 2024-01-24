@@ -392,7 +392,7 @@ def buscar_jugadores_similares_medios(nombre):
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    range=[-1, 7]  # Ajusta este rango según tus datos
+                    range=[-1, 5]  # Ajusta este rango según tus datos
                 )),
             showlegend=True,  # Asegúrate de poner una coma aquí
             margin=dict(  # Añade este bloque de código
