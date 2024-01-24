@@ -11,7 +11,7 @@ import numpy as np
 
 def buscar_jugadores_similares_defensas(nombre):
 
-    Data = pd.read_csv("Data Posición/df_defensas_medias.csv")
+    Data = pd.read_csv("Data Posición/df_Defensas_medias.csv")
     pd.set_option('display.max_columns', None)
 
     Data.fillna((0),inplace=True)
@@ -162,7 +162,7 @@ def buscar_jugadores_similares_defensas(nombre):
 
 def buscar_jugadores_similares_delanteros(nombre):
 
-    Data = pd.read_csv("Data Posición/df_delanteros_medias.csv")
+    Data = pd.read_csv("Data Posición/df_Delanteros_medias.csv")
     pd.set_option('display.max_columns', None)
 
     Data.fillna((0),inplace=True)
@@ -309,7 +309,7 @@ def buscar_jugadores_similares_delanteros(nombre):
     
 def buscar_jugadores_similares_medios(nombre):
 
-    Data = pd.read_csv("Data Posición/df_medio_medias.csv")
+    Data = pd.read_csv("Data Posición/df_Mediocampista_medias.csv")
     pd.set_option('display.max_columns', None)
 
     Data.fillna((0),inplace=True)
@@ -458,7 +458,7 @@ def buscar_jugadores_similares_medios(nombre):
 
 def buscar_jugadores_similares_porteros(nombre):
 
-    Data = pd.read_csv("Data Posición/df_porteros_medias.csv")
+    Data = pd.read_csv("Data Posición/df_Porteros_medias.csv")
     pd.set_option('display.max_columns', None)
 
     Data.fillna((0),inplace=True)
