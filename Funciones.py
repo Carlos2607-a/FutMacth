@@ -34,9 +34,9 @@ def buscar_jugadores_similares_defensas(nombre):
     Clearances_min = Data["Clearances"].min()
     Clearances_max = Data["Clearances"].max()
     
-    Tackles_media = Data["Tackles"].mean()
-    Tackles_min = Data["Tackles"].min()
-    Tackles__max = Data["Tackles"].max()
+    Aerial_duels_won_media = Data["Aerial duels won %"].mean()
+    Aerial_duels_won_min = Data["Aerial duels won %"].min()
+    Aerial_duels_won__max = Data["Aerial duels won %"].max()
     
     Goals_conceded_inside_media = Data["Goals conceded inside the box"].mean()
     Goals_conceded_inside_min = Data["Goals conceded inside the box"].min()
@@ -100,16 +100,16 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[0, 0].set_xlabel('Jugadores')
         axs[0, 0].set_ylabel('Clearances')
-        # Gráfico de dispersión para Tackles
+        # Gráfico de dispersión para Aerial duels won %
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
-        for line in [Tackles__max, Tackles_media, Tackles_min]:
+            axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Aerial duels won %'], color=colores[i % len(colores)], marker='o')
+        for line in [Aerial_duels_won__max, Aerial_duels_won_media, Aerial_duels_won_min]:
             axs[0, 1].axhline(y=line, color='r', linestyle='--')
-        axs[0, 1].set_title('Media de Tackles de los jugadores similares')
+        axs[0, 1].set_title('Media de Aerial duels won % de los jugadores similares')
         axs[0, 1].set_xticks(range(len(jugadores_similares)))
         axs[0, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[0, 1].set_xlabel('Jugadores')
-        axs[0, 1].set_ylabel('Tackles')
+        axs[0, 1].set_ylabel('Aerial duels won %')
         # Gráfico de dispersión para Goals conceded inside the box
         for i, name in enumerate(jugadores_similares['Name']):
             axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals conceded inside the box'], color=colores[i % len(colores)], marker='o')
@@ -185,25 +185,25 @@ def buscar_jugadores_similares_delanteros(nombre):
     Goals_min = Data["Goals"].min()
     Goals_max = Data["Goals"].max()
 
+    Headed_goals_media = Data["Headed goals"].mean()
+    Headed_goals_min = Data["Headed goals"].min()
+    Headed_goals_max = Data["Headed goals"].max()
+
+    Missed_media = Data["Big chances missed"].mean()
+    Missed_min = Data["Big chances missed"].min()
+    Missed_max = Data["Big chances missed"].max()
+
+    Aerial_duels_won_media = Data["Aerial duels won %"].mean()
+    Aerial_duels_won_min = Data["Aerial duels won %"].min()
+    Aerial_duels_won__max = Data["Aerial duels won %"].max()
+
     Assists_media = Data["Assists"].mean()
     Assists_min = Data["Assists"].min()
     Assists_max = Data["Assists"].max()
 
-    created_media = Data["Big chances created"].mean()
-    created_min = Data["Big chances created"].min()
-    created_max = Data["Big chances created"].max()
-
-    Tackles_media = Data["Tackles"].mean()
-    Tackles_min = Data["Tackles"].min()
-    Tackles_max = Data["Tackles"].max()
-
-    Assists_media = Data["Assists"].mean()
-    Assists_min = Data["Assists"].min()
-    Assists_max = Data["Assists"].max()
-
-    Interceptions_media = Data["Big chances created"].mean()
-    Interceptions_min = Data["Big chances created"].min()
-    Interceptions_max = Data["Big chances created"].max()
+    Big_chances_created_media = Data["Big chances created"].mean()
+    Big_chances_created_min = Data["Big chances created"].min()
+    Big_chances_created_max = Data["Big chances created"].max()
 
     
     if len(jugador) == 0:
@@ -244,14 +244,14 @@ def buscar_jugadores_similares_delanteros(nombre):
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
         # Gráfico de dispersión para Big chances created
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
-        for line in [created_max, created_media, created_min]:
+            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances missed'], color=colores[i % len(colores)], marker='o')
+        for line in [Missed_max, Missed_media, Missed_min]:
             axs[0, 0].axhline(y=line, color='r', linestyle='--')
-        axs[0, 0].set_title('Comparativa de Big chances created de los jugadores similares')
+        axs[0, 0].set_title('Comparativa de Big chances missed de los jugadores similares')
         axs[0, 0].set_xticks(range(len(jugadores_similares)))
         axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[0, 0].set_xlabel('Jugadores')
-        axs[0, 0].set_ylabel('Big chances created')
+        axs[0, 0].set_ylabel('Big chances missed')
         # Gráfico de dispersión para la media Goals
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals'], color=colores[i % len(colores)], marker='o')
@@ -262,26 +262,26 @@ def buscar_jugadores_similares_delanteros(nombre):
         axs[0, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[0, 1].set_xlabel('Jugadores')
         axs[0, 1].set_ylabel('Goals')
-        # Gráfico de dispersión para la media Assists
+        # Gráfico de dispersión para la media Headed goals
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Assists'], color=colores[i % len(colores)], marker='o')
-        for line in [Assists_max, Assists_media, Assists_min]:
+            axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Headed goals'], color=colores[i % len(colores)], marker='o')
+        for line in [Headed_goals_max, Headed_goals_media, Headed_goals_min]:
             axs[1, 0].axhline(y=line, color='r', linestyle='--')
-        axs[1, 0].set_title('Comparativa de Assists de los jugadores similares')
+        axs[1, 0].set_title('Comparativa de Headed goals de los jugadores similares')
         axs[1, 0].set_xticks(range(len(jugadores_similares)))
         axs[1, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[1, 0].set_xlabel('Jugadores')
-        axs[1, 0].set_ylabel('Assists')
-        # Gráfico de dispersión para Tackles
+        axs[1, 0].set_ylabel('Headed goals')
+        # Gráfico de dispersión para Aerial duels won %
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
-        for line in [Tackles_max, Tackles_media, Tackles_min]:
+            axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Aerial duels won %'], color=colores[i % len(colores)], marker='o')
+        for line in [Aerial_duels_won__max, Aerial_duels_won_media, Aerial_duels_won_min]:
             axs[1, 1].axhline(y=line, color='r', linestyle='--')
         axs[1, 1].set_title('Comparativa de Aerial duels won  de los jugadores similares')
         axs[1, 1].set_xticks(range(len(jugadores_similares)))
         axs[1, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[1, 1].set_xlabel('Jugadores')
-        axs[1, 1].set_ylabel('Tackles')
+        axs[1, 1].set_ylabel('Aerial duels won %')
         # Gráfico de dispersión para la media Assists
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Assists'], color=colores[i % len(colores)], marker='o')
@@ -295,7 +295,7 @@ def buscar_jugadores_similares_delanteros(nombre):
         # Gráfico de dispersión para la media Big chances created
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
-        for line in [Interceptions_max, Interceptions_media, Interceptions_min]:
+        for line in [Big_chances_created_max, Big_chances_created_media, Big_chances_created_min]:
             axs[2, 1].axhline(y=line, color='r', linestyle='--')
         axs[2, 1].set_title('Comparativa de Big chances created de los jugadores similares')
         axs[2, 1].set_xticks(range(len(jugadores_similares)))
