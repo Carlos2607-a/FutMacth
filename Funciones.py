@@ -517,15 +517,15 @@ def buscar_jugadores_similares_porteros(nombre):
         st.dataframe(jugadores_similares)
 
         # Escala todas las características de los jugadores similares
-        fig = go.Figure()
+        fig1 = go.Figure()
         for i, row in enumerate(jugadores_similares[caracteristicas_grafico].values):  # Usamos los valores originales aquí
-            fig.add_trace(go.Scatterpolar(
+            fig1.add_trace(go.Scatterpolar(
                 r=row,
                 theta=caracteristicas_grafico,
                 fill='toself',
                 name=jugadores_similares.iloc[i]['Name']
             ))
-        fig.update_layout(
+        fig1.update_layout(
             autosize=False,
             width=1000,
             height=1000,
@@ -541,7 +541,7 @@ def buscar_jugadores_similares_porteros(nombre):
                  # Espacio alrededor del gráfico
             )
         )
-        st.plotly_chart(fig)
+        st.plotly_chart(fig1)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
         fig, axs = plt.subplots(3, 2, figsize=(20, 12))  # Ajusta el tamaño según sea necesario
