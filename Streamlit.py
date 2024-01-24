@@ -10,34 +10,30 @@ import streamlit as st
 from Funciones import buscar_jugadores_similares_defensas
 from Funciones import buscar_jugadores_similares_delanteros
 from Funciones import buscar_jugadores_similares_medios
+from Funciones import buscar_jugadores_similares_porteros
 
 
 # Configura la página para usar el modo ancho
 st.set_page_config(layout="wide")
 
-# Usamos el decorador de caché para almacenar los resultados de esta función
-@st.cache
-def importar_datos(posicion):
-    filename = f"Data Posición/df_{posicion}_medias.csv"
-    df = pd.read_csv(filename)
-    return df
 
+st.write("Bienvenido ala aplicación de FutMatch!")
 
-st.write("Bienvenido a la página web de Fútbol Estadísticas!")
-
-opciones = ["delanteros", "medio", "defensas", "porteros"]
+opciones = ["Delanteros", "Mediocampista", "Defensas", "Porteros"]
 opcion = st.selectbox("¿Qué posición deseas consultar?", opciones)
-
-Data = importar_datos(opcion)
 
 nombre_jugador = st.text_input("Introduce el nombre del jugador que deseas buscar")
 
-if opcion == "defensas":
+if opcion == "Defensas":
     buscar_jugadores_similares_defensas(nombre_jugador)
-elif opcion == "delanteros":
+elif opcion == "Delanteros":
     buscar_jugadores_similares_delanteros(nombre_jugador)
-elif opcion == "medio":
+elif opcion == "Mediocampista":
     buscar_jugadores_similares_medios(nombre_jugador)
+elif opcion == "Porteros":
+    buscar_jugadores_similares_porteros(nombre_jugador)
+else:
+    pass
 
 
 
