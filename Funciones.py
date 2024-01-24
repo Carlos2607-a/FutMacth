@@ -334,7 +334,7 @@ def buscar_jugadores_similares_medios(nombre):
     model = NearestNeighbors(n_neighbors=5)  # Buscamos 4 vecinos porque uno de ellos será el jugador mismo
     # Ajusta el modelo a tus datos
     model.fit(features_scaled)
-    caracteristicas_grafico = ['Total passes','Successful dribbles %', 'Accurate passes %', 'Accurate long balls %','Aerial duels won %','Total duels won %','Set piece conversion %','Total shots','Tackles','Interceptions','Fouls','Dribbled past','Assists','Big chances created','Goals','Was fouled','Accurate final third passes']
+    caracteristicas_grafico = ['Total passes','Successful dribbles %', , 'Accurate long balls %','Big chances created','Aerial duels won %','Total duels won %','Set piece conversion %','Total shots','Tackles','Interceptions','Fouls','Dribbled past','Assists','Goals','Accurate passes %','Was fouled','Accurate final third passes']
     
     jugador = Data[Data['Name'] == nombre]
 
