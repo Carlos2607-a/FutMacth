@@ -195,7 +195,7 @@ def buscar_jugadores_similares_delanteros(nombre):
 
     Tackles_media = Data["Tackles"].mean()
     Tackles_min = Data["Tackles"].min()
-    Tackles__max = Data["Tackles"].max()
+    Tackles_max = Data["Tackles"].max()
 
     Assists_media = Data["Assists"].mean()
     Assists_min = Data["Assists"].min()
@@ -275,7 +275,7 @@ def buscar_jugadores_similares_delanteros(nombre):
         # Gráfico de dispersión para Tackles
         for i, name in enumerate(jugadores_similares['Name']):
             axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
-        for line in [Tackles__max, Tackles_media, Tackles_min]:
+        for line in [Tackles_max, Tackles_media, Tackles_min]:
             axs[1, 1].axhline(y=line, color='r', linestyle='--')
         axs[1, 1].set_title('Comparativa de Aerial duels won  de los jugadores similares')
         axs[1, 1].set_xticks(range(len(jugadores_similares)))
