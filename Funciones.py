@@ -157,7 +157,8 @@ def buscar_jugadores_similares_defensas(nombre):
 
         # Leyenda general
         fig.legend(scatter_artists, jugadores_similares['Name'], loc='upper center', ncol=3)
-        plt.subplots_adjust(top=0.60)
+        plt.legend(loc='upper left')
+        plt.legend(fontsize='small')
         plt.tight_layout()
         # Ajusta el layout para que no haya superposición de elementos  
 
