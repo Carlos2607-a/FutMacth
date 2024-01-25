@@ -302,6 +302,7 @@ def buscar_jugadores_similares_delanteros(nombre):
         axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[2, 1].set_ylabel('Big chances created')
         # Ajusta el layout para que no haya superposición de elementos
+        plt.subplots_adjust(wspace=5, hspace=0.4)
         plt.tight_layout()
         st.pyplot(fig)
         return
@@ -449,6 +450,7 @@ def buscar_jugadores_similares_medios(nombre):
         axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[2, 1].set_ylabel('Interceptions')
         # Ajusta el layout para que no haya superposición de elementos
+        plt.subplots_adjust(wspace=5, hspace=0.4)
         plt.tight_layout()
         st.pyplot(fig)
         return
@@ -599,6 +601,7 @@ def buscar_jugadores_similares_porteros(nombre):
         axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[2, 1].set_ylabel('Goals conceded outside the box')
         # Ajusta el layout para que no haya superposición de elementos
+        plt.subplots_adjust(wspace=5, hspace=0.4)
         plt.tight_layout()
         st.pyplot(fig)
         return
