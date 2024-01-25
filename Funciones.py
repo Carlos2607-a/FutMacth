@@ -94,72 +94,72 @@ def buscar_jugadores_similares_defensas(nombre):
         st.plotly_chart(fig1)
         
        # Configura una cuadrícula de subplots con 3 filas y 2 columnas
+        import matplotlib.pyplot as plt
+
         fig, axs = plt.subplots(3, 2, figsize=(20, 9))  # Ajusta el tamaño según sea necesario
-        # Gráfico de dispersión para Clearances
+
+        # Lista para almacenar los artistas de dispersión y nombres
+        scatter_artists = []
+
+        # Gráficos de dispersión y líneas de referencia para Clearances
         for i, name in enumerate(jugadores_similares['Name']):
-            axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Clearances'], color=colores[i % len(colores)], marker='o')
+            scatter = axs[0, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Clearances'], color=colores[i % len(colores)], marker='o')
+            scatter_artists.append(scatter)
         for line in [Clearances_max, Clearances_media, Clearances_min]:
             axs[0, 0].axhline(y=line, color='r', linestyle='--')
         axs[0, 0].set_title('Comparativa de Clearances de los jugadores similares')
-        axs[0, 0].set_xticks(range(len(jugadores_similares)))
-        axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 0].set_xlabel('Jugadores')
         axs[0, 0].set_ylabel('Clearances')
-        # Gráfico de dispersión para Aerial duels won %
+
+        # Gráficos de dispersión y líneas de referencia para Aerial duels won %
         for i, name in enumerate(jugadores_similares['Name']):
             axs[0, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Aerial duels won %'], color=colores[i % len(colores)], marker='o')
         for line in [Aerial_duels_won__max, Aerial_duels_won_media, Aerial_duels_won_min]:
             axs[0, 1].axhline(y=line, color='r', linestyle='--')
         axs[0, 1].set_title('Media de Aerial duels won % de los jugadores similares')
-        axs[0, 1].set_xticks(range(len(jugadores_similares)))
-        axs[0, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 1].set_xlabel('Jugadores')
         axs[0, 1].set_ylabel('Aerial duels won %')
-        # Gráfico de dispersión para Goals conceded inside the box
+
+        # Gráficos de dispersión y líneas de referencia para Goals conceded inside the box
         for i, name in enumerate(jugadores_similares['Name']):
             axs[1, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Goals conceded inside the box'], color=colores[i % len(colores)], marker='o')
         for line in [Goals_conceded_inside_max, Goals_conceded_inside_media, Goals_conceded_inside_min]:
             axs[1, 0].axhline(y=line, color='r', linestyle='--')
         axs[1, 0].set_title('Media de Goals conceded inside the box de los jugadores similares')
-        axs[1, 0].set_xticks(range(len(jugadores_similares)))
-        axs[1, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 0].set_xlabel('Jugadores')
         axs[1, 0].set_ylabel('Goals conceded inside the box')
-        # Gráfico de dispersión para Tackles
+
+        # Gráficos de dispersión y líneas de referencia para Tackles
         for i, name in enumerate(jugadores_similares['Name']):
             axs[1, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Tackles'], color=colores[i % len(colores)], marker='o')
         for line in [Tackles_max, Tackles_media, Tackles_min]:
             axs[1, 1].axhline(y=line, color='r', linestyle='--')
         axs[1, 1].set_title('Media de Tackles de los jugadores similares')
-        axs[1, 1].set_xticks(range(len(jugadores_similares)))
-        axs[1, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 1].set_xlabel('Jugadores')
         axs[1, 1].set_ylabel('Tackles')
-        # Gráfico de dispersión para Accurate final third passes
+
+        # Gráficos de dispersión y líneas de referencia para Accurate final third passes
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 0].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Accurate final third passes'], color=colores[i % len(colores)], marker='o')
         for line in [Accurate_final_third_passesmax, Accurate_final_third_passesmedia, Accurate_final_third_passesmin]:
             axs[2, 0].axhline(y=line, color='r', linestyle='--')
         axs[2, 0].set_title('Media de Accurate final third passes de los jugadores similares')
-        axs[2, 0].set_xticks(range(len(jugadores_similares)))
-        axs[2, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 0].set_xlabel('Jugadores')
         axs[2, 0].set_ylabel('Accurate final third passes')
-        # Gráfico de dispersión para Big chances created
+
+        # Gráficos de dispersión y líneas de referencia para Big chances created
         for i, name in enumerate(jugadores_similares['Name']):
             axs[2, 1].scatter(i, jugadores_similares.loc[jugadores_similares['Name'] == name, 'Big chances created'], color=colores[i % len(colores)], marker='o')
         for line in [creadas_max, creadas_media, creadas_min]:
             axs[2, 1].axhline(y=line, color='r', linestyle='--')
         axs[2, 1].set_title('Media de Total duels won % de los jugadores similares')
-        axs[2, 1].set_xticks(range(len(jugadores_similares)))
-        axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 1].set_xlabel('Jugadores')
         axs[2, 1].set_ylabel('Big chances created')
 
+        # Eliminar etiquetas de ejes x en todos los subplots
+        for ax in axs.flat:
+            ax.set_xticks([])
+            ax.set_xticklabels([])
+
+        # Leyenda general
+        fig.legend(scatter_artists, jugadores_similares['Name'], loc='upper center', ncol=3)
+
         plt.tight_layout()
-        # Ajusta el layout para que no haya superposición de elementos
-          
-   
+        # Ajusta el layout para que no haya superposición de elementos  
         
         st.pyplot(fig)
         return
