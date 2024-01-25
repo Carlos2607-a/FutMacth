@@ -103,7 +103,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[0, 0].set_title('Comparativa de Clearances de los jugadores similares')
         axs[0, 0].set_xticks(range(len(jugadores_similares)))
         axs[0, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 0].set_xlabel('Jugadores')
         axs[0, 0].set_ylabel('Clearances')
         # Gráfico de dispersión para Aerial duels won %
         for i, name in enumerate(jugadores_similares['Name']):
@@ -113,7 +112,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[0, 1].set_title('Media de Aerial duels won % de los jugadores similares')
         axs[0, 1].set_xticks(range(len(jugadores_similares)))
         axs[0, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[0, 1].set_xlabel('Jugadores')
         axs[0, 1].set_ylabel('Aerial duels won %')
         # Gráfico de dispersión para Goals conceded inside the box
         for i, name in enumerate(jugadores_similares['Name']):
@@ -123,7 +121,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[1, 0].set_title('Media de Goals conceded inside the box de los jugadores similares')
         axs[1, 0].set_xticks(range(len(jugadores_similares)))
         axs[1, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 0].set_xlabel('Jugadores')
         axs[1, 0].set_ylabel('Goals conceded inside the box')
         # Gráfico de dispersión para Tackles
         for i, name in enumerate(jugadores_similares['Name']):
@@ -133,7 +130,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[1, 1].set_title('Media de Tackles de los jugadores similares')
         axs[1, 1].set_xticks(range(len(jugadores_similares)))
         axs[1, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[1, 1].set_xlabel('Jugadores')
         axs[1, 1].set_ylabel('Tackles')
         # Gráfico de dispersión para Accurate final third passes
         for i, name in enumerate(jugadores_similares['Name']):
@@ -143,7 +139,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[2, 0].set_title('Media de Accurate final third passes de los jugadores similares')
         axs[2, 0].set_xticks(range(len(jugadores_similares)))
         axs[2, 0].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 0].set_xlabel('Jugadores')
         axs[2, 0].set_ylabel('Accurate final third passes')
         # Gráfico de dispersión para Big chances created
         for i, name in enumerate(jugadores_similares['Name']):
@@ -153,7 +148,6 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[2, 1].set_title('Media de Total duels won % de los jugadores similares')
         axs[2, 1].set_xticks(range(len(jugadores_similares)))
         axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
-        axs[2, 1].set_xlabel('Jugadores')
         axs[2, 1].set_ylabel('Big chances created')
 
         plt.tight_layout()
