@@ -150,7 +150,7 @@ def buscar_jugadores_similares_defensas(nombre):
         axs[2, 1].set_xticklabels(jugadores_similares['Name'], rotation=45)
         axs[2, 1].set_ylabel('Big chances created')
 
-        plt.subplots_adjust(wspace=0.4, hspace=0.4)
+        plt.subplots_adjust(wspace=1, hspace=0.4)
         plt.tight_layout()
         # Ajusta el layout para que no haya superposición de elementos
           
