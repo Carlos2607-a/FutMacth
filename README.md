@@ -1,4 +1,4 @@
-# **FutMatch** :fútbol:️:portería:
+# **FutMatch** :fútbol:️ :portería:
 ## **Descripción**
 Este proyecto es una plataforma web innovadora diseñada para la búsqueda y creación de equipos de fútbol. Nuestra misión es proporcionar a los profesionales del fútbol una herramienta integral que les permita tomar decisiones informadas basadas en datos. Fusionamos datos, pasión por el fútbol y tecnología para ayudar a los clubes y entrenadores a crear equipos exitosos.
 ## **Características Clave:**
