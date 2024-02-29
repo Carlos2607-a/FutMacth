@@ -35,7 +35,6 @@ Ejecuta npm start para iniciar la aplicación.
 
 Contribución
 ¡Estamos abiertos a colaboraciones! Si tienes ideas para mejorar la plataforma o quieres contribuir con nuevas funcionalidades, no dudes en enviar un pull request.
-@Asarotto
 
 Contacto
 Para consultas o asistencia, contáctanos en FutMatch.com
